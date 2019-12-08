@@ -113,24 +113,182 @@
     </header>
     <!-- ##### Header Area End ##### -->
     <!-- ##### Hero Area Start ##### -->
-    <section class="mag-posts-area d-flex flex-wrap">
+<section class="mag-posts-area d-flex flex-wrap">
         <div class="konten mt-30 mb-30 p-30 box-shadow">
-          <div class="row">
-                <div class="col-12">
-                    
-            </div>      
-        </div>        
+            <div class="row">
+			<div class="col-12">
+			<div class="sections-heading"><Center>
+				<a href="#" class="post-cata"><font class="font-autosize">KEGIATAN</font></a>
+				</center></div>
+				</div>
+				<div class="col-5">
+				<div class="hero-area owl-carousel" style="width: auto; height: auto;">
+				<img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x.jpg" alt="">
+				<img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x2.jpg" alt="">
+				<img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x22.jpg" alt="">
+				</div>
+				</div>
+				<div class="col-7">
+				<h6><br> <?php echo "Description Text Here: "?></h6>
+				</div>
+			</div>
+		</div>
+		
     </section>
-    <!-- ##### Hero Area End ##### -->
- <!-- ##### Hero Area Start ##### -->
+	<!-- ##### Hero Area End ##### -->
+	<!-- ##### Hero Area Start ##### -->
     <section class="mag-posts-area d-flex flex-wrap">
-        <div class="konten mt-30 mb-30 p-30 box-shadow">
-          <div class="row">
-                <div class="col-12">
-                   
+        <!-- >>>>>>>>>>>>>>>>>>>>
+         Post Left Sidebar Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+        <div class="post-sidebar-area left-sidebar mt-30 mb-30 bg-white box-shadow">
+            <!-- Sidebar Widget -->
+            <div class="single-sidebar-widget p-30">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <h5>List Agenda</h5>
                 </div>
-            </div>      
-        </div>        
+                <!-- Single Blog Post -->
+                <div class="single-blog-post d-flex">
+				<div class="post-content">
+                        <li><a href="<?php echo base_url();?>">Politik</a></li>
+						<li><a href="<?php echo base_url();?>archive">Pemerintah</a></li>
+						<li><a href="<?php echo base_url();?>video-post">Hukum</a></li>
+						<li><a href="<?php echo base_url();?>single-post">Kriminal</a></li>
+						<li><a href="<?php echo base_url();?>about">Budaya</a></li>
+						<li><a href="<?php echo base_url();?>contact">Lifestyle</a></li>
+						<li><a href="<?php echo base_url();?>contact">Kesehatan</a></li>
+						<li><a href="<?php echo base_url();?>login">Olahraga</a></li>
+                    </div>
+                </div>
+            </div>
+           </div>
+               <!-- >>>>>>>>>>>>>>>>>>>>
+             Main Posts Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+        <div class="mag-posts-content mt-30 mb-30 p-30 box-shadow">
+            <!-- Sports Videos -->
+            <div class="sports-videos-area">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <center><h5>UMKM</h5></center>
+                </div>
+                <div class="trending-post-slides owl-carousel mb-30">
+                    <!-- Single Featured Post -->
+                    <div class="single-featured-post">
+                        <!-- Thumbnail -->
+                        <div class="post-thumbnail mb-50">
+                            <img src="<?php echo base_url();?>assets/img/informasi-umkm/x.jpg" alt="">
+                            <a href="<?php echo base_url();?>link" class="post-content"></a>
+                        </div>
+                        <!-- Post Contetnt -->
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <a href="#">MAY 8, 2019</a>
+                                <a href="<?php echo base_url();?>archive">UMKM BARU</a>
+                            </div>
+                            <a href="<?php echo base_url();?>video-post" class="post-title">Viral Tanpa Keluar Rumah Menghasilkan 1000$ Zimbabwe</a>
+                            <p>Budi setiawan, menghasilkan 1000$ Zimbabwe tanpa meninggalkan rumah sekalipun, sayang sekali 1000$ Zimbabwe bahkan tidak bernilai satu Rupiah pun. </p>
+                        </div>
+                        <!-- Post Share Area -->
+                        <div class="post-share-area d-flex align-items-center justify-content-between">
+                            <!-- Post Meta -->
+                            <div class="post-meta pl-3">
+                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                            </div>
+                            <!-- Share Info -->
+                            <div class="share-info">
+                                <a href="#" class="sharebtn"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                                <!-- All Share Buttons -->
+                                <div class="all-share-btn d-flex">
+                                    <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                    <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<!-- Single Featured Post -->
+                    <div class="single-featured-post">
+                        <!-- Thumbnail -->
+                        <div class="post-thumbnail mb-50">
+                            <img src="<?php echo base_url();?>assets/img/informasi-umkm/x2.jpg" alt="">
+                            <a href="<?php echo base_url();?>link" class="post-content"></a>
+                        </div>
+                        <!-- Post Contetnt -->
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <a href="#">MAY 8, 2019</a>
+                                <a href="<?php echo base_url();?>archive">INSPIRASI</a>
+                            </div>
+                            <a href="<?php echo base_url();?>video-post" class="post-title">Tidak Pernah Menyerah</a>
+                            <p>Sudah bertahun-tahun berjualan, tetapi bisnis selalu <i>stuck</i> akhirnya Setia melakukan ....</p>
+                        </div>
+                        <!-- Post Share Area -->
+                        <div class="post-share-area d-flex align-items-center justify-content-between">
+                            <!-- Post Meta -->
+                            <div class="post-meta pl-3">
+                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                            </div>
+                            <!-- Share Info -->
+                            <div class="share-info">
+                                <a href="#" class="sharebtn"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                                <!-- All Share Buttons -->
+                                <div class="all-share-btn d-flex">
+                                    <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                    <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- >>>>>>>>>>>>>>>>>>>>
+         Post Right Sidebar Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+        <div class="post-sidebar-area right-sidebar mt-30 mb-30 box-shadow">
+
+            <!-- Sidebar Widget -->
+
+            <!-- Sidebar Widget -->
+            <div class="single-sidebar-widget p-30">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <h5>Live Chat</h5>
+                </div>
+				<div id="selector" class="mCustomScrollbar" data-mcs-theme="minimal-dark" data-mcs-auto-hide-scrollbar="true" style="overflow-y:scroll; overflow-x:scroll; height:400px;">
+                <div id="comments-container"></div>
+            </div>
+            </div>
+
+             <div class="single-sidebar-widget p-30">
+                <div class="section-heading">
+                    <h5>Mitra Kami</h5>
+                </div>
+                <div class="single-blog-post d-flex">
+            <div class="single-sidebar-widget">
+               <br> <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/core-img/bri.png" alt=""></a>
+            </div></div>
+            <div class="single-blog-post d-flex">
+            <div class="single-sidebar-widget">
+              <br>  <a href="#b" class="add-img"><img src="<?php echo base_url();?>assets/img/core-img/bjb.png" alt=""></a>
+            </div></div>
+            <div class="single-blog-post d-flex">
+             <div class="single-sidebar-widget">
+               <br> <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/core-img/bpjs-ketenagakerjaan.jpg" alt=""></a>
+            </div></div>
+            <div class="single-blog-post d-flex"></div>
+        </div>
+    </div>
     </section>
     <!-- ##### Hero Area End ##### -->
     <!-- ##### Footer Area Start ##### -->

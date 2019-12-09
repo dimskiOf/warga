@@ -13,7 +13,7 @@ public function list_berita(){
 	$this->db->from('berita');
 	return $this->db->get()->result_array();
 }
-public function inserting_berita($a,$b,$c,$d,$e,$f,$g,$h){
+public function inserting_berita($a,$b,$c,$d,$e,$f,$g,$h,$j){
 	date_default_timezone_set('Asia/Jakarta');
     $tglposting=date('Y-m-d H:i:s');
 	$data = array(
@@ -26,6 +26,7 @@ public function inserting_berita($a,$b,$c,$d,$e,$f,$g,$h){
         'thumbnail' => $e,
         'user_id' => $g,
         'extensi' => $h,
+        'media_src' => $j,
 	);
 	 $hasil = $this->db->insert('berita', $data);
 	 return $hasil;

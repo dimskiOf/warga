@@ -131,13 +131,18 @@
                             { 
                 ?>
         <!-- Single Trending Post -->
-                    <div class="single-trending-post">   
-                        <?php echo $row['thumbnail']; ?>
+
+        <div class="single-trending-post">
+                        <!-- Thumbnail -->
+                        <div class="post-thumbnail">
+                            <?php echo $row['thumbnail']; ?>
+                        </div>
                         <div class="post-content">
                             <a href="<?php echo $row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
                             <a href="<?php echo $row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
                         </div>
-                    </div>
+            </div>
+                    
                 <?php 
                        }
                 ?>
@@ -461,6 +466,7 @@
              Main Posts Area
         <<<<<<<<<<<<<<<<<<<<< -->
         <div class="mag-posts-content mt-30 mb-30 p-30 box-shadow">
+
             <!-- Sports Videos -->
             <div class="sports-videos-area">
                 <!-- Section Title -->
@@ -469,6 +475,7 @@
                 </div>
 
                 <div class="sports-videos-slides owl-carousel mb-30">
+
                     <!-- Single Featured Post -->
                     <div class="single-featured-post">
                         <!-- Thumbnail -->

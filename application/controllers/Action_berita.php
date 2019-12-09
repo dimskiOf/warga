@@ -49,13 +49,16 @@ function inputdataberita(){
             if ($success){
          // set permisi file          
                  chmod('assets/video/video-post/' . $name, 0644);
+                  $temporarys = base_url('assets/video/video-post/'.$name);
                   $a=$this->input->post('berita-name');
                   $b=$this->input->post('kategoris');
                   $c=$this->input->post('berita-author');
                   $d=$this->input->post('kontens');
-                  $e=$name;
+                  $e = '<video src="'.$temporarys.'" alt="" control></video>';
                   $f=$this->input->post('slug-name');
-                  $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f);
+                  $g=$this->session->userdata('userid');
+                  $h=$ext;
+                  $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h);
                   echo json_encode($data);
                } 
             }else{
@@ -72,14 +75,16 @@ function inputdataberita(){
                 $config['new_image']= './assets/img/post-berita/'.$gbr['file_name'];
                 $this->load->library('image_lib', $config);
                 $this->image_lib->resize();
- 
+                $temporary = base_url('assets/img/post-berita/'.$gbr['file_name']);
                 $a=$this->input->post('berita-name');
                 $b=$this->input->post('kategoris');
                 $c=$this->input->post('berita-author');
                 $d=$this->input->post('kontens');
-                $e=$gbr['file_name'];
+                $e = '<img src="'.$temporary.'" alt="">';
                 $f=$this->input->post('slug-name');
-                $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f);
+                $g=$this->session->userdata('userid');
+                $h=$ext;
+                $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h);
               echo json_encode($data);
             }
           }        

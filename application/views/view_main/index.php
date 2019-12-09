@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/mainwindows.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/plyr.css">
 
 </head>
 
@@ -131,7 +132,7 @@
                 ?>
         <!-- Single Trending Post -->
                     <div class="single-trending-post">   
-                        <img src="<?php echo base_url('assets/img/post-berita/'.$row['thumbnail']);?>" alt="">
+                        <?php echo $row['thumbnail']; ?>
                         <div class="post-content">
                             <a href="<?php echo $row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
                             <a href="<?php echo $row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
@@ -159,7 +160,7 @@
                 ?>
         <!-- Single Trending Post -->
                     <div class="single-trending-post">   
-                        <img src="<?php echo base_url('assets/img/post-berita/'.$row['thumbnail']);?>" alt="">
+                        <?php echo $row['thumbnail']; ?>
                         <div class="post-content">
                             <a href="<?php echo $row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
                             <a href="<?php echo $row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
@@ -244,7 +245,7 @@
                 ?>
         <!-- Single Trending Post -->
                     <div class="single-trending-post">   
-                        <img src="<?php echo base_url('assets/img/post-berita/'.$row['thumbnail']);?>" alt="">
+                        <?php echo $row['thumbnail']; ?>
                         <div class="post-content">
                             <a href="<?php echo $row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
                             <a href="<?php echo $row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
@@ -268,11 +269,11 @@
         <!-- Single Trending Post -->
                     <?php 
                             foreach($ok as $row)
-                            { 
-                ?>
+                                { 
+                    ?>
         <!-- Single Trending Post -->
                     <div class="single-trending-post">   
-                        <img src="<?php echo base_url('assets/img/post-berita/'.$row['thumbnail']);?>" alt="">
+                        <?php echo $row['thumbnail']; ?>
                         <div class="post-content">
                             <a href="<?php echo $row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
                             <a href="<?php echo $row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
@@ -773,9 +774,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="<?php echo base_url();?>assets/js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="<?php echo base_url();?>assets/js/active.js"></script>
+    <script src="<?php echo base_url();?>assets/js/plyr.js"></script>
     
     <script>
-
+        const player = new Plyr('#player');
     </script>
 </body>
 

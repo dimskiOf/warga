@@ -32,15 +32,20 @@ class Login extends CI_Controller {
 		'username' => $username,
 		'password' => md5($password)
 		);
+	$where2 = array(
+		'username' => $username
+		);
 	$cek = $this->Data_uploads->dadu("login",$where);
-	if (($cek)==null){
+	$cek1 = $this->Data_uploads->dadu("tbl_user",$where2);
+	if (($cek && $cek1)==null){
 		 $this->session->set_flashdata('pesan', '<div class="alert alert-danger">Username  atau Password  salah..!</div>');
 		redirect(base_url().'login');
 	}else{
 		$data_session = array(
 			'privilages' => $cek[0]['privilage'],
 			'id' => $cek[0]['username'],
-			'token' => $cek[0]['access_token']
+			'token' => $cek[0]['access_token'],
+			'userid'=> $cek1[0]['user_id']
 			);
 		$this->session->set_userdata($data_session);
  		echo '<script>alert("Login Berhasil!");</script>';

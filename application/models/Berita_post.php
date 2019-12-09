@@ -12,7 +12,7 @@ class Berita_post extends CI_Model {
 public function pemerintahdanpolitik(){
     $kategori = 'pemerintah';
     $kategori2 = 'politik';
-    $this->db->select('judul, id_berita, Slug_berita, thumbnail');
+    $this->db->select('judul, id_berita, Slug_berita, thumbnail,extensi');
     $this->db->from('berita');
     $this->db->where("kategori_berita",$kategori);
     $this->db->or_where("kategori_berita",$kategori2);
@@ -22,7 +22,7 @@ public function pemerintahdanpolitik(){
 public function olahragadankesehatan(){
     $kategori = 'olahraga';
     $kategori2 = 'kesehatan';
-    $this->db->select('judul, id_berita, Slug_berita, thumbnail');
+    $this->db->select('judul, id_berita, Slug_berita, thumbnail,extensi');
     $this->db->from('berita');
      $this->db->where("kategori_berita",$kategori);
     $this->db->or_where("kategori_berita",$kategori2);
@@ -31,7 +31,7 @@ public function olahragadankesehatan(){
 public function lifestyledanbudaya(){
     $kategori = 'lifestyle';
     $kategori2 = 'budaya';
-    $this->db->select('judul, id_berita, Slug_berita, thumbnail');
+    $this->db->select('judul, id_berita, Slug_berita, thumbnail,extensi');
     $this->db->from('berita');
     $this->db->where("kategori_berita",$kategori);
     $this->db->or_where("kategori_berita",$kategori2);
@@ -40,7 +40,7 @@ public function lifestyledanbudaya(){
 public function kriminaldanhukum(){
     $kategori = 'kriminal';
     $kategori2 = 'hukum';
-    $this->db->select('judul, id_berita, Slug_berita, thumbnail');
+    $this->db->select('judul, id_berita, Slug_berita, thumbnail,extensi');
     $this->db->from('berita');
     $this->db->where("kategori_berita",$kategori);
     $this->db->or_where("kategori_berita",$kategori2);

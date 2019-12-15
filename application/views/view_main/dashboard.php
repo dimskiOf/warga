@@ -227,7 +227,7 @@ background:lightgray
                    </ul></li>
                    <li><a href="#examplertrw" aria-expanded="false" data-toggle="collapse"><i class="icon-interface-windows"></i>Data RT&RW</a><ul id="examplertrw" class="collapse list-unstyled "><li><a href="#" data-toggle="modal" data-target="#myModal">List RT&RW</a></li>
                    		<li><a href="#" data-toggle="modal" data-target="#myModal">List UMKM</a></li>
-                   <li><a href="#" data-toggle="modal" data-target="#modalShare">Tambah Data</a></li>
+                   <li id="add-rtrw"><a href="#">Tambah Data</a></li>
                    </ul></li>
                    <li><a href="#" aria-expanded="false" ><i class="icon-interface-windows"></i>Setting</a><ul id="example" class="collapse list-unstyled ">
                    </ul></li>';
@@ -406,12 +406,103 @@ background:lightgray
                 </div>
         </div>
 
+         <!-- rt add -->
+        <div id="form-addrtrw" class="container-fluid">
+          <div class="container-fluid">
+          <!-- Page Header-->
+          <header> 
+            <h1 class="h3 display">Form Input RT/RW           </h1>
+          </header>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header d-flex align-items-center">
+                  <h4>Isi Form Berikut</h4>
+                </div>
+                <div class="card-body">
+                  <form class="form-horizontal" id="proses-rt" action="<?php echo base_url(); ?>Action_berita/inputdatartrw" method="POST" enctype="multipart/form-data">
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Kelurahan</label>
+                      <div class="col-sm-10">
+                        <input id="auth" name="klurhn-name" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Kecamatan</label>
+                      <div class="col-sm-10">
+                        <input id="auth" name="kcmtn-name" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">RW</label>
+                      <div class="col-sm-10">
+				            <input id="auth" name="rw-no" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">NIK Ketua RW</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rw-nik" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Nama Ketua RW</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rw-name" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Telepon RW</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rw-telp" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">RT</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rt-no" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">NIK Ketua RT</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rt-nik" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Nama Ketua RT</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rt-name" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Telpon RT</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rt-telp" type="text" class="form-control" required="">
+                      </div>
+                    </div>                    
+                    <div class="line"></div>
+                    <div class="form-group row">
+                      <div class="col-sm-4 offset-sm-2">
+                        <button id="clear-form" type="submit" class="btn btn-secondary">Batalkan</button>
+                        <button id="input-rt" type="submit" class="btn btn-primary">Input Data</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- end rt add -->
+
          <!-- berita add -->
         <div id="form-berita" class="container-fluid">
           <div class="container-fluid">
           <!-- Page Header-->
           <header> 
-            <h1 class="h3 display">Forms Berita           </h1>
+            <h1 class="h3 display">Form Input Berita           </h1>
           </header>
           <div class="row">
             <div class="col-lg-12">
@@ -436,7 +527,7 @@ background:lightgray
                     <div class="form-group row">
                       <label class="col-sm-2 form-control-label">Thumbnail (.jpg .mp4 .png)</label>
                       <div class="col-sm-10">
-				            <input id="file-0" name="myFile" class="file" type="file">
+                    <input id="file-0" name="myFile" class="file" type="file">
                       </div>
                     </div>
                     <div class="form-group row">
@@ -480,8 +571,7 @@ background:lightgray
           </div>
         </div>
         </div>
-        <!-- end berita add -->
-
+        <!-- end berita -->
         <div class="container-fluid">
           
         </div>
@@ -929,11 +1019,13 @@ background:lightgray
 <script>
 	$("#list-berita").hide();
 	$("#form-berita").hide();
+  $("#form-addrtrw").hide();
 	$(document).ready(function(){
 		$("#user-info").click(function(){
 			$("#list-user").fadeIn();
 			$("#list-berita").fadeOut();
 			$("#form-berita").fadeOut();
+      $("#form-addrtrw").fadeOut();
 		});
 	});
 	$(document).ready(function(){
@@ -941,6 +1033,7 @@ background:lightgray
 			$("#list-user").fadeOut();
 			$("#form-berita").fadeOut();
 			$("#list-berita").fadeIn();
+      $("#form-addrtrw").fadeOut();
 		});
 	});
 	$(document).ready(function(){
@@ -948,9 +1041,17 @@ background:lightgray
 			$("#list-user").fadeOut();
 			$("#list-berita").fadeOut();
 			$("#form-berita").fadeIn();
-			
+      $("#form-addrtrw").fadeOut();
 		});
 	});
+  $(document).ready(function(){
+    $("#add-rtrw").click(function(){
+      $("#list-user").fadeOut();
+      $("#list-berita").fadeOut();
+      $("#form-berita").fadeOut();
+      $("#form-addrtrw").fadeIn();
+    });
+  });
     $('#goreadme').summernote({
   minHeight: 200,
   placeholder: 'Write here ...',
@@ -1002,6 +1103,48 @@ background:lightgray
 		 $('#auth').val('');	
 		});
 	});
+$(document).ready(function () {
+
+    $("#input-rt").click(function (event) {
+
+        //stop submit the form, we will post it manually.
+        event.preventDefault();
+
+        // Get form
+        var form = $('#proses-rt')[0];
+
+    // Create an FormData object 
+        var data = new FormData(form);
+
+    // If you want to add an extra field for the FormData
+        //data.append("CustomField", "This is some extra data, testing");
+
+    
+
+        $.ajax({
+            type: "POST",
+            enctype: 'multipart/form-data',
+            url: "<?php echo base_url(); ?>Action_berita/inputdatartrw",
+            data: data,
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+
+        $('#clear-form').click();
+              
+
+            },
+            error: function (e) {
+                $("#input-rt").prop("disabled", false);
+
+            }
+        });
+
+    });
+
+});
 $(document).ready(function () {
 
     $("#berhenti").click(function (event) {

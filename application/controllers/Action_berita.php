@@ -7,6 +7,7 @@ class Action_berita extends CI_Controller {
                 $this->load->helper('url');
                 $this->load->library('session');
                 $this->load->model('Berita_model');
+                $this->load->model('Rtrw_model');
                 $this->load->library('upload');
 
 
@@ -16,6 +17,23 @@ class Action_berita extends CI_Controller {
         $this->load->view('view_main/berita');
 
     }
+function inputdatartrw(){
+    if (-($this->session->userdata('privilages') == 'SUPERADMIN') or ($this->session->userdata('privilages') == 'ADMIN')){
+                  $a=$this->input->post('klurhn-name');
+                  $b=$this->input->post('kcmtn-name');
+                  $c=$this->input->post('rw-no');
+                  $d=$this->input->post('rw-nik');
+                  $e=$this->input->post('rw-name');
+                  $f=$this->input->post('rw-telp');
+                  $k=$this->session->userdata('userid');
+                  $g=$this->input->post('rt-no');
+                  $i=$this->input->post('rt-name');
+                  $h=$this->input->post('rt-nik');
+                  $j=$this->input->post('rt-telp');
+                  $data = $this->Rtrw_model->inserting_rtrw($a,$b,$c,$d,$e,$f,$g,$h,$i,$j,$k);
+                  echo json_encode($data);
+                }
+              }
 function inputdataberita(){
     if (($this->session->userdata('privilages') == 'SUPERADMIN') or ($this->session->userdata('privilages') == 'ADMIN')){
         $config['upload_path'] = './assets/img/post-berita/'; //path folder
@@ -58,7 +76,7 @@ function inputdataberita(){
                   $f=$this->input->post('slug-name');
                   $g=$this->session->userdata('userid');
                   $h=$ext;
-                  $j=$name
+                  $j=$name;
                   $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h,$j);
                   echo json_encode($data);
                } 

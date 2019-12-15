@@ -442,22 +442,14 @@
                 </div>
                                           
                 <!-- Section Title --></div>
-                 <div class="single-sidebar-widget p-30">
+                                  <div class="single-sidebar-widget p-30">
                                     <div class="section-heading">
-                                        <h5>Statistik</h5>
+                                        <h5>PETA REKREASI</h5>
                 </div>
                                       
                 <!-- Social Followers Info -->
-                <div class="social-followers-info">
-                    <!-- Facebook -->
-                    <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i> 4,360 <span>Like</span></a>
-                    <!-- Twitter -->
-                    <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i> 3,280 <span>Followers</span></a>
-                    <!-- YouTube -->
-                    <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i> 1250 <span>Subscribers</span></a>
-                    <!-- Google -->
-                    <a href="#" class="google-followers"><i class="fa fa-google-plus"></i> 4,230 <span>Followers</span></a>
-                </div>
+<iframe width="250" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/d/u/0/embed?mid=15mn2vqWcljzA3jLD215uIdOiuU5m9Z_O" width="250" height="450"></iframe>
+
             </div>
             </div>
         </div>

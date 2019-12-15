@@ -19,6 +19,7 @@ public function pemerintahdanpolitik(){
     
     return $this->db->get()->result_array();
 }
+
 public function olahragadankesehatan(){
     $kategori = 'olahraga';
     $kategori2 = 'kesehatan';
@@ -46,5 +47,10 @@ public function kriminaldanhukum(){
     $this->db->or_where("kategori_berita",$kategori2);
     return $this->db->get()->result_array();
 }
-
+public function showberita($berita_id){
+    $this->db->select('media_src,duration_vid,judul, id_berita, Slug_berita,pembuat, thumbnail,kategori_berita,konten,tgl');
+    $this->db->from('berita');
+    $this->db->where("id_berita",$berita_id);
+    return $this->db->get()->result_array();
+}
 }

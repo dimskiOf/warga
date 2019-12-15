@@ -120,7 +120,7 @@
             <div class="row">
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+                  <div id="b1" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <div class="single-trending-post">
@@ -135,7 +135,7 @@
 
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+                  <div id="b2" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <div class="single-trending-post">
@@ -150,7 +150,7 @@
               
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="">
+                  <div id="b3" class="hero-area owl-carousel" style="">
 
         <!-- Single Trending Post -->
                    <div class="single-trending-post">
@@ -165,7 +165,7 @@
               
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="">
+                  <div id="b4" class="hero-area owl-carousel" style="">
 
         <!-- Single Trending Post -->
                    <div class="single-trending-post">
@@ -182,7 +182,7 @@
             <div class="row">
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+                  <div id="b5" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <div class="single-trending-post">
@@ -197,7 +197,7 @@
 
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+                  <div id="b8" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <div class="single-trending-post">
@@ -212,7 +212,7 @@
               
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="">
+                  <div id="b6" class="hero-area owl-carousel" style="">
 
         <!-- Single Trending Post -->
                    <div class="single-trending-post">
@@ -227,7 +227,7 @@
               
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="">
+                  <div id="b7" class="hero-area owl-carousel" style="">
 
         <!-- Single Trending Post -->
                    <div class="single-trending-post">
@@ -248,111 +248,30 @@
     <section class="mag-posts-area d-flex flex-wrap">
 
         <!-- >>>>>>>>>>>>>>>>>>>>
-         Post Left Sidebar Area
-        <<<<<<<<<<<<<<<<<<<<< -->
-        <div class="post-sidebar-area left-sidebar mt-30 mb-30 bg-white box-shadow">
-            <!-- Sidebar Widget -->
-            <div class="single-sidebar-widget p-30">
-                <!-- Section Title -->
-                <div class="section-heading">
-                    <h5>Terpopuler</h5>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post d-flex">
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/4.jpg" alt="">
-                    </div>
-                    <div class="post-content">
-                        <a href="<?php echo base_url();?>single-post" class="post-title">Global Travel And Vacations Luxury Travel</a>
-                        <div class="post-meta d-flex justify-content-between">
-                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post d-flex">
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/5.jpg" alt="">
-                    </div>
-                    <div class="post-content">
-                        <a href="<?php echo base_url();?>single-post" class="post-title">Cruising Destination Ideas</a>
-                        <div class="post-meta d-flex justify-content-between">
-                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post d-flex">
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/6.jpg" alt="">
-                    </div>
-                    <div class="post-content">
-                        <a href="<?php echo base_url();?>single-post" class="post-title">The Luxury Of Traveling With</a>
-                        <div class="post-meta d-flex justify-content-between">
-                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post d-flex">
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/7.jpg" alt="">
-                    </div>
-                    <div class="post-content">
-                        <a href="<?php echo base_url();?>single-post" class="post-title">Choose The Perfect Accommodations</a>
-                        <div class="post-meta d-flex justify-content-between">
-                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post d-flex">
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/8.jpg" alt="">
-                    </div>
-                    <div class="post-content">
-                        <a href="<?php echo base_url();?>single-post" class="post-title">A Guide To Rocky Mountain Vacations</a>
-                        <div class="post-meta d-flex justify-content-between">
-                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- >>>>>>>>>>>>>>>>>>>>
              Main Posts Area
         <<<<<<<<<<<<<<<<<<<<< -->
-        <div class="mag-posts-content mt-30 mb-30 p-30 box-shadow">
+        <?php 
+          foreach($iniisinyaberita as $databerita)
+                { 
+        ?>
+        <div class="mag-berita-content mt-30 mb-30 p-30 box-shadow">
         <!-- Single Blog Post -->
+
+                <div class="single-trending-post">
+                        <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="" style="height: 400px;">
+                        <div class="post-content">
+                    </div>                   
+                </div>
                 <div class="single-featured-post">
-                        <!-- Thumbnail -->
-                        <div class="post-thumbnail mb-50">
-                            <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="" style="height: auto">
-                        </div>
                         <!-- Post Contetnt -->
+                    
                         <div class="post-content">
                             <div class="post-meta">
-                                <a href="#">MAY 8, 2019</a>
-                                <a href="<?php echo base_url();?>archive">BERITA</a>
+                                <a href="#"><?php echo $databerita['tgl']; ?></a>
+                                <a href="#"><?php echo $databerita['kategori_berita']; ?></a>
                             </div>
-                            <a href="<?php echo base_url();?>video-post" class="post-title">JUDUL BERITA</a>
-                            <p>isi berita</p>
+                            <a href="#" class="post-title"><?php echo $databerita['judul']; ?></a>
+                            <p><?php echo $databerita['konten']; ?></p>
                         </div>
                         <!-- Post Share Area -->
                         <div class="post-share-area d-flex align-items-center justify-content-between">
@@ -363,6 +282,7 @@
                                 <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
                             </div>
                         </div>
+                    <?php } ?>
                     </div>
         </div>
 
@@ -568,7 +488,7 @@
                     <!-- Copywrite Text -->
                     <div class="col-12 col-sm-6">
                         <p class="copywrite-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="" aria-hidden="true"></i> by <a href="" target="_blank">Developer-Team</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="" aria-hidden="true"></i> by <a href="" target="_blank">Developer-Teamter</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div>
                     <div class="col-12 col-sm-6">

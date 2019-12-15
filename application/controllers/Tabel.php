@@ -8,6 +8,7 @@ class Tabel extends CI_Controller {
                 $this->load->helper(array('form', 'url'));
                 $this->load->library('session');
                 $this->load->model('Tabel_model');
+                $this->load->model('Berita_model');
 
         }
    public function index()
@@ -82,6 +83,15 @@ class Tabel extends CI_Controller {
           $this->load->view('err404');
         }
       }    
+
+    public function getdataberita(){
+        if (($this->session->userdata('privilages') == 'SUPERADMIN') or ($this->session->userdata('privilages') == 'ADMIN')){
+          $data = $this->Berita_model->list_berita();
+          echo json_encode($data);
+        }else{
+          $this->load->view('err404');
+        }
+      }
 
     public function update_user(){
       if ($this->session->userdata('privilages') == 'SUPERADMIN'){

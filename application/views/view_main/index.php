@@ -124,7 +124,7 @@
                   <div class="sections-heading">
                     <center><h5>PEMERINTAH & POLITIK</h5></center>
                 </div>
-            <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+            <div id="pp" class="hero-area owl-carousel" style="width: auto; height: auto;">
                  <!-- Single Trending Post -->
                  <?php 
                             foreach($pp as $row)
@@ -138,8 +138,8 @@
                             <?php echo $row['thumbnail']; ?>
                         </div>
                         <div class="post-content">
-                            <a href="<?php echo $row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
-                            <a href="<?php echo $row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
+                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
                         </div>
             </div>
                     
@@ -156,7 +156,7 @@
                  <div class="sections-heading">
                     <center><h5>BUDAYA & LIFESTYLE</h5></center>
                 </div>
-            <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+            <div id="bl" class="hero-area owl-carousel" style="width: auto; height: auto;">
                 
         <!-- Single Trending Post -->
                 <?php 
@@ -164,13 +164,16 @@
                             { 
                 ?>
         <!-- Single Trending Post -->
-                    <div class="single-trending-post">   
-                        <?php echo $row['thumbnail']; ?>
+                   <div class="single-trending-post">
+                        <!-- Thumbnail -->
+                        <div class="post-thumbnail">
+                            <?php echo $row['thumbnail']; ?>
+                        </div>
                         <div class="post-content">
-                            <a href="<?php echo $row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
                             <a href="<?php echo $row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
                         </div>
-                    </div>
+                 </div>
                 <?php 
                        }
                 ?>
@@ -183,7 +186,7 @@
                   <div class="sections-heading">
                     <center><h5>Warga TV</h5></center>
                 </div>
-            <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+            <div id="a6" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <div class="single-trending-post">
@@ -205,13 +208,12 @@
             </div>
                 </div>
               </div>
-              
-              <div class="column">
-                <div class="card">
+               <div class="column">
+            <div class="card" >
                   <div class="sections-heading">
                     <center><h5>UMKM RT & RW</h5></center>
                 </div>
-            <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+            <div id="a7" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <div class="single-trending-post">
@@ -232,7 +234,7 @@
                 </div>
             </div>
                 </div>
-              </div>
+                </div> 
             </div>
             <br>
             <div class="row">
@@ -241,7 +243,7 @@
                   <div class="sections-heading">
                     <center><h5>HUKUM & KRIMINAL</h5></center>
                 </div>
-            <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+            <div id="hk" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                  <?php 
@@ -249,11 +251,14 @@
                             { 
                 ?>
         <!-- Single Trending Post -->
-                    <div class="single-trending-post">   
-                        <?php echo $row['thumbnail']; ?>
+                    <div class="single-trending-post">
+                        <!-- Thumbnail -->
+                        <div class="post-thumbnail">
+                            <?php echo $row['thumbnail']; ?>
+                        </div>
                         <div class="post-content">
-                            <a href="<?php echo $row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
-                            <a href="<?php echo $row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
+                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
                         </div>
                     </div>
                 <?php 
@@ -269,7 +274,7 @@
                  <div class="sections-heading">
                     <center><h5>KESEHATAN & OLAHRAGA</h5></center>
                 </div>
-            <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+            <div id="ko" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <?php 
@@ -277,13 +282,16 @@
                                 { 
                     ?>
         <!-- Single Trending Post -->
-                    <div class="single-trending-post">   
-                        <?php echo $row['thumbnail']; ?>
-                        <div class="post-content">
-                            <a href="<?php echo $row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
-                            <a href="<?php echo $row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
+                    <div class="single-trending-post">
+                        <!-- Thumbnail -->
+                        <div class="post-thumbnail">
+                            <?php echo $row['thumbnail']; ?>
                         </div>
-                    </div>
+                        <div class="post-content">
+                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
+                        </div>
+            </div>
                 <?php 
                        }
                 ?>
@@ -297,7 +305,7 @@
                   <div class="sections-heading">
                     <center><h5>Suara Warga</h5></center>
                 </div>
-            <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+            <div id="a5" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <div class="single-trending-post">
@@ -320,34 +328,8 @@
                 </div>
               </div>
               
-              <div class="column">
-                <div class="card">
-                  <div class="sections-heading">
-                    <center><h5>UMKM RT & RW</h5></center>
-                </div>
-            <div class="hero-area owl-carousel" style="width: auto; height: auto;">
-
-        <!-- Single Trending Post -->
-                    <div class="single-trending-post">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/4.jpg" alt="">
-                        <div class="post-content">
-                            <a href="#" class="post-cata">Radio Streaming</a>
-                            <a href="video-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
-                        </div>
-                    </div>
-
-        <!-- Single Trending Post -->
-                    <div class="single-trending-post">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/4.jpg" alt="">
-                        <div class="post-content">
-                            <a href="#" class="post-cata">Radio Streaming</a>
-                            <a href="video-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
-                        </div>
-                </div>
             </div>
-                </div>
-              </div>
-            </div>       
+                 
         </div>        
     </section>
     <!-- ##### Hero Area End ##### -->

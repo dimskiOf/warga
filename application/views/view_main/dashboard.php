@@ -67,6 +67,32 @@ background:lightgray
 }
     </style>
 
+ <div class="container">
+  <div class="modal fade" id="popup" role="dialog">
+   <div class="subtab_left">
+        <div class="modal-dialog modal-dialog-centered">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            
+            <h4 class="modal-title">  Form Validasi  </h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+           <center><div class="alert alert-warning">Isi Form Tidak Valid..!</div></center>
+      </div>
+      <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+          </div>
+  
+          </div>
+        </div>
+       
+      </div>
+  </div>
+  </div>
+
 <div class="container">
   <div class="modal fade" id="loadMe" tabindex="-1" role="dialog">
    <div class="subtab_left">
@@ -223,7 +249,6 @@ background:lightgray
             <?php
             if($this->session->userdata('id')){
             echo '<li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-interface-windows"></i>Berita</a><ul id="exampledropdownDropdown" class="collapse list-unstyled "><li id="add-berita"><a href="#">Tambah Berita</a></li><li id="berita-info"><a href="#" data-toggle="modal" data-target="#modalShare">List Berita</a></li>
-            	<li><a href="#" data-toggle="modal" data-target="#modalShare">Kategori Berita</a></li>
                    </ul></li>
                    <li><a href="#examplertrw" aria-expanded="false" data-toggle="collapse"><i class="icon-interface-windows"></i>Data RT&RW</a><ul id="examplertrw" class="collapse list-unstyled "><li><a href="#" data-toggle="modal" data-target="#myModal">List RT&RW</a></li>
                    		<li><a href="#" data-toggle="modal" data-target="#myModal">List UMKM</a></li>
@@ -420,7 +445,7 @@ background:lightgray
                   <h4>Isi Form Berikut</h4>
                 </div>
                 <div class="card-body">
-                  <form class="form-horizontal" id="prosesing" action="<?php echo base_url(); ?>Action_berita/inputdataberita" method="POST" enctype="multipart/form-data">
+                  <form class="form-horizontal" id="prosesing">
                     <div class="form-group row">
                       <label class="col-sm-2 form-control-label">Judul Berita</label>
                       <div class="col-sm-10">
@@ -434,13 +459,28 @@ background:lightgray
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="col-sm-2 form-control-label">Thumbnail (.jpg .mp4 .png)</label>
+                          <label class="col-sm-2 form-control-label">Media</label>
+                           <div class="col-sm-10">
+                          <select name="medias" id="media_id" class="form-control">
+                          <option value="1">Video</option>
+                          <option value="2">Gambar</option>
+                        </select>
+                		 </div>
+               </div>
+               		<div class="form-group row" id="zone-up1">
+                      <label class="col-sm-2 form-control-label">Video (.mp4)</label>
                       <div class="col-sm-10">
 				            <input id="file-0" name="myFile" class="file" type="file">
                       </div>
                     </div>
+                    <div class="form-group row" id="zone-up2">
+                      <label class="col-sm-2 form-control-label">Thumbnail (.jpg.png)</label>
+                      <div class="col-sm-10">
+				            <input id="file-2" name="myFile2" class="file" type="file">
+                      </div>
+                    </div>
                     <div class="form-group row">
-                      <label class="col-sm-2 form-control-label">Kategori Berita (pake select)</label>
+                      <label class="col-sm-2 form-control-label">Kategori Berita</label>
                       <div class="col-sm-10">
                         <select id="ktgr" name="kategoris" class="form-control select2" data-placeholder="Select a Kategory" style="width: 100%">
                           <option>Politik</option>
@@ -470,7 +510,7 @@ background:lightgray
                     <div class="form-group row">
                       <div class="col-sm-4 offset-sm-2">
                         <button id="clear-form" type="submit" class="btn btn-secondary">Batalkan</button>
-                        <button id="berhenti" type="submit" class="btn btn-primary">Posting</button>
+                        <button id="berhenti" onclick="justimgandvideo();" type="submit" class="btn btn-primary">Posting</button>
                       </div>
                     </div>
                   </form>
@@ -549,7 +589,7 @@ background:lightgray
         function tampil_data_berita(){
             $.ajax({
                 type  : 'GET',
-                url   : '<?php echo base_url()?>Action_berita/getdataberita',
+                url   : '<?php echo base_url()?>tabel/getdataberita',
                 async : true,
                 dataType : 'json',
                 success : function(data){
@@ -1002,33 +1042,38 @@ background:lightgray
 		 $('#auth').val('');	
 		});
 	});
-$(document).ready(function () {
 
-    $("#berhenti").click(function (event) {
 
-        //stop submit the form, we will post it manually.
+function justimgandvideo(){
+
         event.preventDefault();
 
-        // Get form
         var form = $('#prosesing')[0];
 
-		// Create an FormData object 
         var data = new FormData(form);
-
-		// If you want to add an extra field for the FormData
-        //data.append("CustomField", "This is some extra data, testing");
-
-		
 
         $.ajax({
             type: "POST",
             enctype: 'multipart/form-data',
-            url: "<?php echo base_url(); ?>Action_berita/inputdataberita",
+            url: '<?php echo base_url(); ?>Action_berita/inputdataberita',
             data: data,
             processData: false,
             contentType: false,
             cache: false,
             timeout: 600000,
+            beforeSend: function() {
+        	var x = document.forms["prosesing"]["berita-name"].value;
+        	var y = document.forms["prosesing"]["slug-name"].value;
+        	var z = document.forms["prosesing"]["myFile"].value;
+        	var d = document.forms["prosesing"]["myFile2"].value;
+        	var a = document.forms["prosesing"]["kategoris"].value;
+        	var b = document.forms["prosesing"]["berita-author"].value;
+        	var c = document.forms["prosesing"]["kontens"].value;
+        	 if (x,y,z,a,b,c,d == "") {
+    			$('#popup').modal('show');
+   				return false;
+  				}
+    		},
             success: function (data) {
 
             	$('.select2').val(null).trigger('change');
@@ -1036,6 +1081,7 @@ $(document).ready(function () {
 				$('#jdl-berita').val('');
 				$('#slg-berita').val('');
 				$('#file-0').fileinput('clear');
+				$('#file-2').fileinput('clear');
 				$('#auth').val('');
               
 
@@ -1046,19 +1092,98 @@ $(document).ready(function () {
             }
         });
 
-    });
+    };
 
-});
+
+
+function justimg(){
+
+		event.preventDefault();
+
+        var form = $('#prosesing')[0];
+
+        var data = new FormData(form);
+
+        $.ajax({
+            type: "POST",
+            enctype: 'multipart/form-data',
+            url: '<?php echo base_url(); ?>Action_berita/inputdataberitas',
+            data: data,
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            beforeSend: function() {
+        	var x = document.forms["prosesing"]["berita-name"].value;
+        	var y = document.forms["prosesing"]["slug-name"].value;
+        	var z = document.forms["prosesing"]["myFile1"].value;
+        	var a = document.forms["prosesing"]["kategoris"].value;
+        	var b = document.forms["prosesing"]["berita-author"].value;
+        	var c = document.forms["prosesing"]["kontens"].value;
+        	 if (x,y,z,a,b,c == "") {
+    			$('#popup').modal('show');
+   				return false;
+  				}
+    		},
+            success: function (data) {
+
+            	$('.select2').val(null).trigger('change');
+				$('#goreadme').summernote('code', '');
+				$('#jdl-berita').val('');
+				$('#slg-berita').val('');
+				$('#file-0').fileinput('clear');
+				$('#file-2').fileinput('clear');
+				$('#auth').val('');
+              
+
+            },
+            error: function (e) {
+                $("#berhenti").prop("disabled", false);
+
+            }
+        });
+
+};
+
 
     $("#file-0").fileinput({
         theme: 'fas',
         showUpload: false,
+        allowedFileExtensions: ["mp4"],
+    	maxFileCount: 1
+         });
+    $("#file-2").fileinput({
+        theme: 'fas',
+        showUpload: false,
+        allowedFileExtensions: ["png","jpg","jpeg"],
         maxImageWidth: 260,
     	maxImageHeight: 260,
     	resizePreference: 'height',
     	maxFileCount: 1,
     	resizeImage: true
          });
+
+function deploy(){
+  $('#brh-henti').attr('onclick', 'justimgandvideo();');
+  $("#brh-henti").prop('id', 'berhenti');
+  $("#file-2").prop('name', 'myFile2'); 
+  $("#zone-up1").fadeIn();
+  
+} 
+function depliy(){
+ $('#berhenti').attr('onclick', 'justimg();');
+  $("#berhenti").prop('id', 'brh-henti');
+  $("#file-2").prop('name', 'myFile1'); 
+  $("#zone-up1").fadeOut();
+  
+} 
+
+document.getElementById('media_id').addEventListener('change', function (){
+
+	this.value == 1 ? deploy() : depliy() ;
+
+})
+
 </script>
   </body>
 </html>  

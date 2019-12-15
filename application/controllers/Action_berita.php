@@ -13,27 +13,31 @@ class Action_berita extends CI_Controller {
         }
         public function index()
     {
-        $this->load->view('view_main/berita');
+       redirect(base_url().'dashboard', 'refresh');
 
     }
-function inputdataberita(){
+
+    public function inputdataberita(){
     if (($this->session->userdata('privilages') == 'SUPERADMIN') or ($this->session->userdata('privilages') == 'ADMIN')){
+        require_once(APPPATH.'/vendor/autoload.php');
+        $getID3 = new getID3;
         $config['upload_path'] = './assets/img/post-berita/'; //path folder
-        $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp|mp4'; //type yang dapat diakses bisa anda sesuaikan
+        $config['allowed_types'] = 'jpg|png|jpeg'; //type yang dapat diakses bisa anda sesuaikan
         $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
         define("UPLOAD_DIR", "assets/video/video-post/");
         $this->upload->initialize($config);
-        if(!empty($_FILES['myFile']['name'])){
+     if(!empty($_FILES['myFile']['name']) && !empty($_FILES['myFile2']['name'])){
             $namafile = $_FILES['myFile']['name'];
             $tmp = $_FILES['myFile']['tmp_name'];
             $ext = pathinfo($_FILES['myFile']['name'], PATHINFO_EXTENSION);
             $name = preg_replace("/[^A-Z0-9._-]/i", "_", $namafile);
+            $videopower = $getID3->analyze($tmp);
+
             list($filenames,$ekstensi) = array_pad(explode('.', $namafile),2,null);
             list($explode) = array_pad(explode('.', $ekstensi),1,null);
             $names = preg_replace("/[^A-Z0-9._-]/i", "_", $filenames);
 
-                // mencegah overwrite filename
-              $a = 0;
+            $a = 0;
               while (file_exists(UPLOAD_DIR . $name)) {
                 $a++;
                 if (!($explode)){
@@ -44,106 +48,90 @@ function inputdataberita(){
                 }
               }
 
-            if ($ext == 'mp4'){
-            $success = move_uploaded_file($tmp,UPLOAD_DIR . $name);
-            if ($success){
-         // set permisi file          
-                 chmod('assets/video/video-post/' . $name, 0644);
-                  $temporarys = base_url('assets/img/post-berita/'.$name);
-                  $a=$this->input->post('berita-name');
-                  $b=$this->input->post('kategoris');
-                  $c=$this->input->post('berita-author');
-                  $d=$this->input->post('kontens');
-                  $e = '<img src="'.$temporarys.'" alt=""><a href="#" class="video-play"><i class="fa fa-play"></i></a>';
-                  $f=$this->input->post('slug-name');
-                  $g=$this->session->userdata('userid');
-                  $h=$ext;
-                  $j=$name
-                  $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h,$j);
-                  echo json_encode($data);
-               } 
-            }else{
-            if ($this->upload->do_upload('myFile')){
-                $gbr = $this->upload->data();
-                //Compress Image
-                $config['image_library']='gd2';
-                $config['source_image']='./assets/img/post-berita/'.$gbr['file_name'];
-                $config['create_thumb']= FALSE;
-                $config['maintain_ratio']= FALSE;
-                $config['quality']= '50%';
-                $config['width']= 400;
-                $config['height']= 400;
-                $config['new_image']= './assets/img/post-berita/'.$gbr['file_name'];
-                $this->load->library('image_lib', $config);
-                $this->image_lib->resize();
-                $temporary = base_url('assets/img/post-berita/'.$gbr['file_name']);
-                $a=$this->input->post('berita-name');
-                $b=$this->input->post('kategoris');
-                $c=$this->input->post('berita-author');
-                $d=$this->input->post('kontens');
-                $e = '<img src="'.$temporary.'" alt=""><a href="#" class="video-play"><i class="fa fa-play"></i></a>';
-                $f=$this->input->post('slug-name');
-                $g=$this->session->userdata('userid');
-                $h=$ext;
-                $j='Null Media';
-                $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h);
-              echo json_encode($data);
+     if ($ext == 'mp4'){
+            if ($this->upload->do_upload('myFile2')){
+            $gbr = $this->upload->data();
+            move_uploaded_file($tmp,UPLOAD_DIR . $name);
+             //Compress Image
+            $config['image_library']='gd2';
+            $config['source_image']='./assets/img/post-berita/'.$gbr['file_name'];
+            $config['create_thumb']= FALSE;
+            $config['maintain_ratio']= FALSE;
+            $config['quality']= '50%';
+            $config['width']= 400;
+            $config['height']= 400;
+            $config['new_image']= './assets/img/post-berita/'.$gbr['file_name'];
+            $this->load->library('image_lib', $config);
+            $this->image_lib->resize();
+            $temporary = base_url('assets/img/post-berita/'.$gbr['file_name']);
+            $a=$this->input->post('berita-name');
+            $b=$this->input->post('kategoris');
+            $c=$this->input->post('berita-author');
+            $d=$this->input->post('kontens');
+            $e = '<img src="'.$temporary.'" alt=""><a href="video-post.html" class="video-play" data-animation="bounceIn"><i class="fa fa-play"></i></a><span class="video-duration">'.$videopower['playtime_string'].'</span>';
+            $f=$this->input->post('slug-name');
+            $g=$this->session->userdata('userid');
+            $h=$ext;
+            $j=$name;
+            $k=$videopower['playtime_string'];
+            $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h,$j,$k);
+             echo json_encode($data);
             }
-          }        
         }else{
-            echo "Image yang diupload kosong";
+            echo "ext tidak valid";
         }
         }else{
-            $this->load->view('err404');
-        }         
-    }
-public function builders(){
- if (($this->session->userdata('privilages') == 'SUPERADMIN') or ($this->session->userdata('privilages') == 'ADMIN')){
-      $config['upload_path'] = './assets/img/post-berita/'; //path folder
-      $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp|mp4'; //type yang dapat diakses bisa anda sesuaikan
-      $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
-      define("UPLOAD_DIR", "assets/video/video-post/");
-      $this->upload->initialize($config);
-    if(!empty($_FILES['myFile']['name'])){
-           $namafile = $_FILES['myFile']['name'];
-            $tmp = $_FILES['myFile']['tmp_name'];
-            $ext = pathinfo($_FILES['myFile']['name'], PATHINFO_EXTENSION);
-            $name = preg_replace("/[^A-Z0-9._-]/i", "_", $namafile);
-            list($filenames,$ekstensi) = array_pad(explode('.', $namafile),2,null);
-            list($explode) = array_pad(explode('.', $ekstensi),1,null);
-            $names = preg_replace("/[^A-Z0-9._-]/i", "_", $filenames);
-
-                // mencegah overwrite filename
-            $a = 0;
-            while (file_exists(UPLOAD_DIR . $name)) {
-            $a++;
-            if (!($explode)){
-                $name = $names . "-" . $a . $ext ; 
-               
-            }else{
-                $name = $names . "-" . $a . "." . $ext ; 
-                }
-            }
-
-    if ($ext == 'mp4'){
-
-        }else{
-
-        }    
+           echo "empty file";
+        }
       }else{
-        echo "empty file";
-      }  
-     }else{
+         $this->load->view('err404');
+        }
+    }
 
-     }   
+    public function inputdataberitas(){
+    if (($this->session->userdata('privilages') == 'SUPERADMIN') or ($this->session->userdata('privilages') == 'ADMIN')){
+        $config['upload_path'] = './assets/img/post-berita/'; //path folder
+        $config['allowed_types'] = 'jpg|png|jpeg'; //type yang dapat diakses bisa anda sesuaikan
+        $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
+        $this->upload->initialize($config);
+        if(!empty($_FILES['myFile1']['name'])){
+            $ext = pathinfo($_FILES['myFile1']['name'], PATHINFO_EXTENSION);
+
+        if ($this->upload->do_upload('myFile1')){
+            $gbr = $this->upload->data();
+             //Compress Image
+            $config['image_library']='gd2';
+            $config['source_image']='./assets/img/post-berita/'.$gbr['file_name'];
+            $config['create_thumb']= FALSE;
+            $config['maintain_ratio']= FALSE;
+            $config['quality']= '50%';
+            $config['width']= 400;
+            $config['height']= 400;
+            $config['new_image']= './assets/img/post-berita/'.$gbr['file_name'];
+            $this->load->library('image_lib', $config);
+            $this->image_lib->resize();
+            $temporary = base_url('assets/img/post-berita/'.$gbr['file_name']);
+            $a=$this->input->post('berita-name');
+            $b=$this->input->post('kategoris');
+            $c=$this->input->post('berita-author');
+            $d=$this->input->post('kontens');
+            $e = '<img src="'.$temporary.'" alt="">';
+            $f=$this->input->post('slug-name');
+            $g=$this->session->userdata('userid');
+            $h=$ext;
+            $j='Media Null';
+            $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h,$j);
+             echo json_encode($data);
+            }
+        else{
+            echo "ext tidak valid";
+        }
+        }else{
+            echo "empty file";
+        }
+      }else{
+            $this->load->view('err404');
+        }
     }
     
-    public function getdataberita(){
-        if ($this->session->userdata('privilages') == 'SUPERADMIN'){
-          $data = $this->Berita_model->list_berita();
-          echo json_encode($data);
-        }else{
-          $this->load->view('err404');
-        }
-      }
 }

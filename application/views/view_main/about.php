@@ -134,7 +134,7 @@
         <div class="container">
             <div class="row">
                 <!-- Footer Widget Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-lg-4">
                     <div class="footer-widget">
                         <!-- Logo -->
                        <a href="index.html" class="foo-logo"><img src="<?php echo base_url();?>assets/img/core-img/logotest.png" alt=""></a>
@@ -148,31 +148,32 @@
                </div>
 
                 <!-- Footer Widget Area -->
-               <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="footer-widget">
-                        <h6 class="widget-title"></h6>
-                        <nav class="footer-widget-nav">
-                        </nav>
-                    </div>
-                </div>
+
                 <!-- Footer Widget Area -->
-                   <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="footer-widget">
-                        <h6 class="widget-title"></h6>
-                        <nav class="footer-widget-nav">
-                        </nav>
-                    </div>
-                </div>
-                <!-- Footer Widget Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-lg-4">
                     <div class="footer-widget">
                         <h6 class="widget-title">Lokasi Kami</h6>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8670804047233!2d107.61561731431699!3d-6.906493669509677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64a6f5d33d9%3A0x1b9680357b9941a5!2sGrha%20Kompas%20Gramedia!5e0!3m2!1sid!2sid!4v1575817343562!5m2!1sid!2sid" width="350" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8670804047233!2d107.61561731431699!3d-6.906493669509677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64a6f5d33d9%3A0x1b9680357b9941a5!2sGrha%20Kompas%20Gramedia!5e0!3m2!1sid!2sid!4v1575817343562!5m2!1sid!2sid" width="350" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
+         
+
+        <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="footer-widget">
+                        <h6 class="widget-title">Mitra Kami</h6>
+                        <div class="row"> 
+            <div class="col-6 col-sm-3 col-lg-5">
+             <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/sponsor/spon1.png" alt=""></a></div>
+              <div class="col-6 col-sm-3 col-lg-5">
+            <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/sponsor/spon2.png" alt=""></a></div>
+             <div class="col-6 col-sm-3 col-lg-5">
+            <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/sponsor/spon3.png" alt=""></a></div>
+            </div></div></div>
+                </div>
+                   </div>
+                     </div></div>
+
         <!-- Copywrite Area -->
         <div class="copywrite-area">
             <div class="container">

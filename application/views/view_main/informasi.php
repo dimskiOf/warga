@@ -123,9 +123,9 @@
 				</div>
 				<div class="col-5">
 				<div class="hero-area owl-carousel" style="width: auto; height: auto;">
-				<img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x.jpg" alt="">
-				<img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x2.jpg" alt="">
-				<img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x22.jpg" alt="">
+                <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x.jpg" alt=""></a>
+                <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x22.jpg" alt=""></a>
+                <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x2.jpg" alt=""></a>
 				</div>
 				</div>
 				<div class="col-7">
@@ -269,25 +269,6 @@
                 <div id="comments-container"></div>
             </div>
             </div>
-
-             <div class="single-sidebar-widget p-30">
-                <div class="section-heading">
-                    <h5>Mitra Kami</h5>
-                </div>
-                <div class="single-blog-post d-flex">
-            <div class="single-sidebar-widget">
-               <br> <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/core-img/bri.png" alt=""></a>
-            </div></div>
-            <div class="single-blog-post d-flex">
-            <div class="single-sidebar-widget">
-              <br>  <a href="#b" class="add-img"><img src="<?php echo base_url();?>assets/img/core-img/bjb.png" alt=""></a>
-            </div></div>
-            <div class="single-blog-post d-flex">
-             <div class="single-sidebar-widget">
-               <br> <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/core-img/bpjs-ketenagakerjaan.jpg" alt=""></a>
-            </div></div>
-            <div class="single-blog-post d-flex"></div>
-        </div>
     </div>
     </section>
     <!-- ##### Hero Area End ##### -->

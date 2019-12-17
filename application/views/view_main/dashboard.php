@@ -1486,9 +1486,7 @@ $(document).ready(function () {
 
 });
 
-$(document).ready(function () {
 
-    $("#berhenti").click(function (event) {
 
 function justimgandvideo(){
 
@@ -1539,8 +1537,7 @@ function justimgandvideo(){
         });
 
     };
-  });
-});
+
 
 
 

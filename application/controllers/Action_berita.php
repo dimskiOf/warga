@@ -13,14 +13,12 @@ class Action_berita extends CI_Controller {
         }
         public function index()
     {
-<<<<<<< HEAD
+
        redirect(base_url().'dashboard', 'refresh');
 
     }
 
-    public function inputdataberita(){
-        redirect(base_url().'dashboard', 'refresh');
-    }
+   
 function get_kec(){
   $a = $this->input->post('keg-kel');
   $data = $this->Berita_model->get_kec($a);
@@ -93,8 +91,7 @@ function inputdatartrw(){
                   echo json_encode($data);
                 }
               }
-function inputdataberita(){
->>>>>>> 90dbba6f26482fd84bdbb385b5b63b18798679e2
+public function inputdataberita(){
     if (($this->session->userdata('privilages') == 'SUPERADMIN') or ($this->session->userdata('privilages') == 'ADMIN')){
         require_once(APPPATH.'/vendor/autoload.php');
         $getID3 = new getID3;
@@ -125,7 +122,6 @@ function inputdataberita(){
                 }
               }
 
-<<<<<<< HEAD
      if ($ext == 'mp4'){
             if ($this->upload->do_upload('myFile2')){
             $gbr = $this->upload->data();
@@ -153,51 +149,6 @@ function inputdataberita(){
             $k=$videopower['playtime_string'];
             $data = $this->Berita_model->inserting_berita($o,$b,$c,$d,$e,$f,$g,$h,$j,$k);
              echo json_encode($data);
-            if ($ext == 'mp4'){
-            $success = move_uploaded_file($tmp,UPLOAD_DIR . $name);
-            if ($success){
-         // set permisi file          
-                 chmod('assets/video/video-post/' . $name, 0644);
-                  $temporarys = base_url('assets/img/post-berita/'.$name);
-                  $a=$this->input->post('berita-name');
-                  $b=$this->input->post('kategoris');
-                  $c=$this->input->post('berita-author');
-                  $d=$this->input->post('kontens');
-                  $e = '<img src="'.$temporarys.'" alt=""><a href="#" class="video-play"><i class="fa fa-play"></i></a>';
-                  $f=$this->input->post('slug-name');
-                  $g=$this->session->userdata('userid');
-                  $h=$ext;
-                  $j=$name;
-                  $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h,$j);
-                  echo json_encode($data);
-               } 
-            }else{
-            if ($this->upload->do_upload('myFile')){
-                $gbr = $this->upload->data();
-                //Compress Image
-                $config['image_library']='gd2';
-                $config['source_image']='./assets/img/post-berita/'.$gbr['file_name'];
-                $config['create_thumb']= FALSE;
-                $config['maintain_ratio']= FALSE;
-                $config['quality']= '50%';
-                $config['width']= 400;
-                $config['height']= 400;
-                $config['new_image']= './assets/img/post-berita/'.$gbr['file_name'];
-                $this->load->library('image_lib', $config);
-                $this->image_lib->resize();
-                $temporary = base_url('assets/img/post-berita/'.$gbr['file_name']);
-                $a=$this->input->post('berita-name');
-                $b=$this->input->post('kategoris');
-                $c=$this->input->post('berita-author');
-                $d=$this->input->post('kontens');
-                $e = '<img src="'.$temporary.'" alt=""><a href="#" class="video-play"><i class="fa fa-play"></i></a>';
-                $f=$this->input->post('slug-name');
-                $g=$this->session->userdata('userid');
-                $h=$ext;
-                $j='Null Media';
-                $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h);
-              echo json_encode($data);
->>>>>>> 90dbba6f26482fd84bdbb385b5b63b18798679e2
             }
         }else{
             echo "ext tidak valid";
@@ -256,7 +207,7 @@ function inputdataberita(){
         }
     }
     
-<<<<<<< HEAD
+
     public function getdataberita(){
         if ($this->session->userdata('privilages') == 'SUPERADMIN'){
           $data = $this->Berita_model->list_berita();
@@ -273,5 +224,5 @@ function inputdataberita(){
           $this->load->view('err404');
         }
       }
->>>>>>> 5496e596e0d0e29270c3810cfffffaa5d4ec94ff
+
 }

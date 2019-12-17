@@ -228,7 +228,7 @@ background:lightgray
                    <li><a href="#examplertrw" aria-expanded="false" data-toggle="collapse"><i class="icon-interface-windows">
                    </i>Data RT&RW</a><ul id="examplertrw" class="collapse list-unstyled ">
                    <li id="add-rtrw"><a href="#">Tambah RT&RW</a></li>
-                   <li><a href="#" data-toggle="modal" data-target="#myModal">List RT&RW</a></li>
+                   <li id="list-rtrw"><a href="#" data-toggle="modal" data-target="#myModal">List RT&RW</a></li>
                    <li id="add-kegiatan"><a href="#">Tambah Kegiatan</a></li>
                    <li><a href="#" data-toggle="modal" data-target="#myModal">List Kegitan</a></li>
                    
@@ -594,17 +594,21 @@ background:lightgray
                     <div class="form-group row">
                       <label class="col-sm-2 form-control-label">Kelurahan</label>
                       <div class="col-sm-2">
-                        <select required="" class="form-control select" name="keg-kel">
-                          <option>memek</option>
-                          <option>kontol</option>
+                        <select id="keg-select" required="" class="form-control select" name="keg-kel">
+                          <?php foreach ($kelur as $kel) {
+                            ?>
+                          }<option><?php echo $kel['kelurahan'];?></option>
+                        <?php }?>
                         </select>
                       </div>
                       <label class="col-sm-2 form-control-label">Kecamatan</label>
                       <div class="col-sm-2">
-                        <select required="" class="form-control select" name="keg-kec">
-                          <option>memek</option>
-                          <option>kontol</option>
-                        </select>
+                        <select id="kec-select" required="" class="form-control select" name="keg-kec">
+                          <?php foreach ($kecam as $kec) {
+                            ?>
+                          }<option><?php echo $kec['kecamatan'];?></option>
+                        <?php }?>
+                      </select>
                       </div>
                       <label class="col-sm-1 form-control-label">RW</label>
                       <div class="col-sm-1">
@@ -1104,6 +1108,16 @@ background:lightgray
   $("#form-addrtrw").hide();
   $("#form-kegiatan").hide();
 
+  $(document).ready(function(){
+    $("#list-rtrw").click(function(){
+      $("#list-rtrw").fadeIn();
+      $("#list-berita").fadeOut();
+      $("#form-berita").fadeOut();
+      $("#form-addrtrw").fadeOut();
+      $("#form-kegiatan").fadeOut();
+      $("#list-user").fadeOut();
+    });
+  });
 	$(document).ready(function(){
 		$("#user-info").click(function(){
 			$("#list-user").fadeIn();
@@ -1111,6 +1125,7 @@ background:lightgray
 			$("#form-berita").fadeOut();
       $("#form-addrtrw").fadeOut();
       $("#form-kegiatan").fadeOut();
+      $("#list-rtrw").fadeOut();
 		});
 	});
 	$(document).ready(function(){
@@ -1120,6 +1135,7 @@ background:lightgray
 			$("#list-berita").fadeIn();
       $("#form-addrtrw").fadeOut();
       $("#form-kegiatan").fadeOut();
+      $("#list-rtrw").fadeOut();
 		});
 	});
 	$(document).ready(function(){
@@ -1129,6 +1145,7 @@ background:lightgray
 			$("#form-berita").fadeIn();
       $("#form-addrtrw").fadeOut();
       $("#form-kegiatan").fadeOut();
+      $("#list-rtrw").fadeOut();
 		});
 	});
   $(document).ready(function(){
@@ -1138,6 +1155,7 @@ background:lightgray
       $("#form-berita").fadeOut();
       $("#form-addrtrw").fadeIn();
       $("#form-kegiatan").fadeOut();
+      $("#list-rtrw").fadeOut();
     });
   });
   $(document).ready(function(){
@@ -1147,6 +1165,7 @@ background:lightgray
       $("#form-berita").fadeOut();
       $("#form-addrtrw").fadeOut();
       $("#list-user").fadeOut();
+      $("#list-rtrw").fadeOut();
     });
   });
     $('#goreadme').summernote({
@@ -1242,6 +1261,7 @@ $(document).ready(function () {
     });
 
 });
+
 $(document).ready(function () {
 
     $("#input-keg").click(function (event) {
@@ -1284,6 +1304,7 @@ $(document).ready(function () {
     });
 
 });
+
 $(document).ready(function () {
 
     $("#berhenti").click(function (event) {

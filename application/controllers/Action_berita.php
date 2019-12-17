@@ -13,18 +13,20 @@ class Action_berita extends CI_Controller {
         }
         public function index()
     {
-        $this->load->view('view_main/dashboard');
-        $data['kelur'] = $this->Berita_model->get_kel();
-        $data['kecam'] = $this->Berita_model->get_kec();
+        redirect(base_url().'dashboard', 'refresh');
+        // $this->load->view('view_main/dashboard');
+        // $data['kelur'] = $this->Berita_model->get_kel();
+        // $data['kecam'] = $this->Berita_model->get_kec();
     }
+
 function inputdatakegiatan(){
     if (-($this->session->userdata('privilages') == 'SUPERADMIN') or ($this->session->userdata('privilages') == 'ADMIN')){
 
-      $aa =$this->input->POST['keg-kel'];
-      $bb =$this->input->POST['keg-kec']; 
-      $cc =$this->input->POST['keg-rt']; 
-      $dd =$this->input->POST['keg-rw']; 
-      $data['idrtrw'] = $this->Berita_model->get_rtrw($aa, $bb, $cc, $dd);
+      $aa =$this->input->post('keg-kel');
+      $bb =$this->input->post('keg-kec'); 
+      $cc =$this->input->post('keg-rt'); 
+      $dd =$this->input->post('keg-rw'); 
+      $data_rtrwid = $this->Berita_model->get_rtrw($aa, $bb, $cc, $dd);
         $config['upload_path'] = './assets/img/post-kegiatan/'; //path folder
         $config['allowed_types'] = 'jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
         $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
@@ -56,7 +58,9 @@ function inputdatakegiatan(){
                 $a=$this->input->post('keg-name');
                 $b=$this->input->post('keg-desk');
                 $d=$this->input->post('keg-tgl');
-                $e='0';
+                foreach ($data_rtrwid as $row) {
+                $e=$row['id'];
+                }
                 $f=$this->session->userdata('userid');
                 $data = $this->Berita_model->inserting_kegiatan($a,$b,$c,$d,$e,$f);
                 echo json_encode($data);

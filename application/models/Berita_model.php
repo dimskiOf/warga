@@ -51,24 +51,22 @@ public function inserting_rtrw($a,$b,$c,$d,$e,$f,$g,$h,$i,$j,$k){
 public function get_kel(){
     $this->db->select('kelurahan');
     $this->db->from('tbl_rtrw');
-    $this->db->where('$kel');
     $this->db->group_by('kelurahan');
     return $this->db->get()->result_array();
 }
 public function get_kec(){
     $this->db->select('kecamatan');
     $this->db->from('tbl_rtrw');
-    $this->db->where('$kec');
     $this->db->group_by('kecamatan');
     return $this->db->get()->result_array();
 }
 public function get_rtrw($kel,$kec,$rt,$rw){
-    $this->db->select('kelurahan, kecamatan, rt, rw');
+    $this->db->select('id');
     $this->db->from('tbl_rtrw');
-    $this->db->where('$kel');
-    $this->db->where('$kec');
-    $this->db->where('$rt');
-    $this->db->where('$rw');
+    $this->db->where('kelurahan',$kel);
+    $this->db->where('kecamatan',$kec);
+    $this->db->where('rt',$rt);
+    $this->db->where('rw',$rw);
     return $this->db->get()->result_array();
 }
 public function inserting_kegiatan($a,$b,$c,$d,$e,$f){

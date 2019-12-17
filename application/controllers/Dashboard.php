@@ -6,6 +6,7 @@ class dashboard extends CI_Controller {
                 parent::__construct();
                 $this->load->helper('url');
                 $this->load->library('session');
+                $this->load->model('Berita_model');
               //  $this->load->model('');
 
 
@@ -14,9 +15,12 @@ class dashboard extends CI_Controller {
     {   
         $ses1 = $this->session->userdata('id');
         if (isset($ses1)){
-        $this->load->view('view_main/dashboard');
+            $data['kelur'] = $this->Berita_model->get_kel(); 
+            $data['kecam'] = $this->Berita_model->get_kec();    
+            $this->load->view('view_main/dashboard', $data);
         }else{
         redirect(base_url().'login', 'refresh');
          }
+
     }
 }

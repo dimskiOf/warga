@@ -299,34 +299,33 @@
   .neptune .owl-prev,
   .neptune .owl-next {
     position: absolute;
-    background-color: rgba(235, 235, 235, 0.2);
-    width: 50px;
-    height: 50px;
-    color: #ffffff;
-    font-size: 20px;
+    background-color: #e1e1e1;
+    width: 40px;
+    height: 40px;
+    color: #272727;
+    font-size: 18px;
     text-align: center;
-    line-height: 54px;
-    top: 50%;
-    left: 3%;
-    margin-top: -25px;
+    line-height: 42px;
+    top: -70px;
+    right: 41px;
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
     transition-duration: 500ms; }
+    .neptune .owl-prev:hover, .neptune .owl-prev:focus,
+    .neptune .owl-next:hover,
+    .neptune .owl-next:focus
+     {
+      background-color: #ed3974;
+      color: #ffffff; }
     @media only screen and (max-width: 767px) {
       .neptune .owl-prev,
       .neptune .owl-next {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-        line-height: 44px;
-        margin-top: -20px; } }
-    .neptune .owl-prev:hover, .neptune .owl-prev:focus,
-    .neptune .owl-next:hover,
-    .neptune .owl-next:focus {
-      background-color: #ed3974; }
-  .hero-area .owl-next {
-    left: auto;
-    right: 3%; }
+        width: 20px;
+        right: 21px;
+        height: 36px;
+        top: -66px; } }
+  .neptune .owl-next {
+    right: 0; }
 
 .heros-area {
   position: relative;
@@ -554,4 +553,9 @@
   text-align: center;
 }
 
-     
+
+.plyr {
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+

@@ -126,26 +126,43 @@
                 </div>
             <div id="pp" class="hero-area owl-carousel" style="width: auto; height: auto;">
                  <!-- Single Trending Post -->
-                 <?php 
-                            foreach($pp as $row)
-                            { 
+                 <?php  
+                    $set1 = array_filter($pp, function($e){
+                    return $e['extensi'] == 'mp4';
+                    });
+
+                    $set2 = array_filter($pp, function($b){
+                     return $b['extensi'] != 'mp4';
+                    });
+
+                    foreach($set1 as $row1)
+                  {
                 ?>
         <!-- Single Trending Post -->
-
-        <div class="single-trending-post">
+                <div class="single-trending-post">
                         <!-- Thumbnail -->
                         <div class="post-thumbnail">
-                            <?php echo $row['thumbnail']; ?>
+                        <img src="<?php echo base_url('assets/img/post-berita/').$row1['thumbnail']?>" alt="">
+                        <a href="#" class="video-play" data-animation="bounceIn"><i class="fa fa-play"></i></a>
+                        <span class="video-duration"><?php echo $row1['duration_vid']; ?></span>
                         </div>
                         <div class="post-content">
-                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
-                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row1['id_berita']; ?>" class="post-cata"><?php echo $row1['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row1['id_berita']; ?>" class="post-title"><?php echo $row1['Slug_berita']; ?></a>
                         </div>
-            </div>
-                    
-                <?php 
-                       }
-                ?>
+                    </div>
+                <?php } foreach($set2 as $row2)
+                  { ?>
+                    <div class="single-trending-post">
+                        <!-- Thumbnail -->
+                        <div class="post-thumbnail">
+                        <img src="<?php echo base_url('assets/img/post-berita/').$row2['thumbnail']?>" alt="">
+                        </div>
+                        <div class="post-content">
+                            <a href="<?php echo base_url().'berita?berita_id='.$row2['id_berita']; ?>" class="post-cata"><?php echo $row2['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row2['id_berita']; ?>" class="post-title"><?php echo $row2['Slug_berita']; ?></a>
+                        </div>
+                    </div> <?php } ?>
                  <!-- end Single Trending Post -->
             </div>
                 </div>
@@ -158,25 +175,45 @@
                 </div>
             <div id="bl" class="hero-area owl-carousel" style="width: auto; height: auto;">
                 
-        <!-- Single Trending Post -->
-                <?php 
-                            foreach($lb as $row)
-                            { 
+         <!-- Single Trending Post -->
+                 <?php  
+                    $set1 = array_filter($lb, function($e){
+                    return $e['extensi'] == 'mp4';
+                    });
+
+                    $set2 = array_filter($lb, function($b){
+                     return $b['extensi'] != 'mp4';
+                    });
+
+                    foreach($set1 as $row1)
+                  {
                 ?>
         <!-- Single Trending Post -->
-                   <div class="single-trending-post">
+                <div class="single-trending-post">
                         <!-- Thumbnail -->
                         <div class="post-thumbnail">
-                            <?php echo $row['thumbnail']; ?>
+                        <img src="<?php echo base_url('assets/img/post-berita/').$row1['thumbnail']?>" alt="">
+                        <a href="#" class="video-play" data-animation="bounceIn"><i class="fa fa-play"></i></a>
+                        <span class="video-duration"><?php echo $row1['duration_vid']; ?></span>
                         </div>
                         <div class="post-content">
-                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
-                            <a href="<?php echo $row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row1['id_berita']; ?>" class="post-cata"><?php echo $row1['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row1['id_berita']; ?>" class="post-title"><?php echo $row1['Slug_berita']; ?></a>
                         </div>
-                 </div>
-                <?php 
-                       }
-                ?>
+                    </div>
+                <?php } foreach($set2 as $row2)
+                  { ?>
+                    <div class="single-trending-post">
+                        <!-- Thumbnail -->
+                        <div class="post-thumbnail">
+                        <img src="<?php echo base_url('assets/img/post-berita/').$row2['thumbnail']?>" alt="">
+                        </div>
+                        <div class="post-content">
+                            <a href="<?php echo base_url().'berita?berita_id='.$row2['id_berita']; ?>" class="post-cata"><?php echo $row2['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row2['id_berita']; ?>" class="post-title"><?php echo $row2['Slug_berita']; ?></a>
+                        </div>
+                    </div> <?php } ?>
+                 <!-- end Single Trending Post -->
             </div>
                 </div>
               </div>
@@ -246,24 +283,44 @@
             <div id="hk" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
-                 <?php 
-                            foreach($kh as $row)
-                            { 
+                 <?php  
+                    $set1 = array_filter($kh, function($e){
+                    return $e['extensi'] == 'mp4';
+                    });
+
+                    $set2 = array_filter($kh, function($b){
+                     return $b['extensi'] != 'mp4';
+                    });
+
+                    foreach($set1 as $row1)
+                  {
                 ?>
         <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                        <!-- Thumbnail -->
+                        <div class="post-thumbnail">
+                        <img src="<?php echo base_url('assets/img/post-berita/').$row1['thumbnail']?>" alt="">
+                        <a href="#" class="video-play" data-animation="bounceIn"><i class="fa fa-play"></i></a>
+                        <span class="video-duration"><?php echo $row1['duration_vid']; ?></span>
+                        </div>
+                        <div class="post-content">
+                            <a href="<?php echo base_url().'berita?berita_id='.$row1['id_berita']; ?>" class="post-cata"><?php echo $row1['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row1['id_berita']; ?>" class="post-title"><?php echo $row1['Slug_berita']; ?></a>
+                        </div>
+                    </div>
+                <?php } foreach($set2 as $row2)
+                  { ?>
                     <div class="single-trending-post">
                         <!-- Thumbnail -->
                         <div class="post-thumbnail">
-                            <?php echo $row['thumbnail']; ?>
+                        <img src="<?php echo base_url('assets/img/post-berita/').$row2['thumbnail']?>" alt="">
                         </div>
                         <div class="post-content">
-                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
-                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row2['id_berita']; ?>" class="post-cata"><?php echo $row2['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row2['id_berita']; ?>" class="post-title"><?php echo $row2['Slug_berita']; ?></a>
                         </div>
-                    </div>
-                <?php 
-                       }
-                ?>
+                    </div> <?php } ?>
+                 <!-- end Single Trending Post -->
                     
             </div>
                 </div>
@@ -276,25 +333,45 @@
                 </div>
             <div id="ko" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
+         <!-- Single Trending Post -->
+                 <?php  
+                    $set1 = array_filter($ok, function($e){
+                    return $e['extensi'] == 'mp4';
+                    });
+
+                    $set2 = array_filter($ok, function($b){
+                     return $b['extensi'] != 'mp4';
+                    });
+
+                    foreach($set1 as $row1)
+                  {
+                ?>
         <!-- Single Trending Post -->
-                    <?php 
-                            foreach($ok as $row)
-                                { 
-                    ?>
-        <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                        <!-- Thumbnail -->
+                        <div class="post-thumbnail">
+                        <img src="<?php echo base_url('assets/img/post-berita/').$row1['thumbnail']?>" alt="">
+                        <a href="#" class="video-play" data-animation="bounceIn"><i class="fa fa-play"></i></a>
+                        <span class="video-duration"><?php echo $row1['duration_vid']; ?></span>
+                        </div>
+                        <div class="post-content">
+                            <a href="<?php echo base_url().'berita?berita_id='.$row1['id_berita']; ?>" class="post-cata"><?php echo $row1['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row1['id_berita']; ?>" class="post-title"><?php echo $row1['Slug_berita']; ?></a>
+                        </div>
+                    </div>
+                <?php } foreach($set2 as $row2)
+                  { ?>
                     <div class="single-trending-post">
                         <!-- Thumbnail -->
                         <div class="post-thumbnail">
-                            <?php echo $row['thumbnail']; ?>
+                        <img src="<?php echo base_url('assets/img/post-berita/').$row2['thumbnail']?>" alt="">
                         </div>
                         <div class="post-content">
-                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-cata"><?php echo $row['judul']; ?></a>
-                            <a href="<?php echo base_url().'berita/'.$row['id_berita']; ?>" class="post-title"><?php echo $row['Slug_berita']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row2['id_berita']; ?>" class="post-cata"><?php echo $row2['judul']; ?></a>
+                            <a href="<?php echo base_url().'berita?berita_id='.$row2['id_berita']; ?>" class="post-title"><?php echo $row2['Slug_berita']; ?></a>
                         </div>
-            </div>
-                <?php 
-                       }
-                ?>
+                    </div> <?php } ?>
+                 <!-- end Single Trending Post -->
 
             </div>
                 </div>

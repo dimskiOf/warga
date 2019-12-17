@@ -63,18 +63,17 @@ class Action_berita extends CI_Controller {
             $config['new_image']= './assets/img/post-berita/'.$gbr['file_name'];
             $this->load->library('image_lib', $config);
             $this->image_lib->resize();
-            $temporary = base_url('assets/img/post-berita/'.$gbr['file_name']);
-            $a=$this->input->post('berita-name');
+            $o=$this->input->post('berita-name');
             $b=$this->input->post('kategoris');
             $c=$this->input->post('berita-author');
             $d=$this->input->post('kontens');
-            $e = '<img src="'.$temporary.'" alt=""><a href="video-post.html" class="video-play" data-animation="bounceIn"><i class="fa fa-play"></i></a><span class="video-duration">'.$videopower['playtime_string'].'</span>';
+            $e=$gbr['file_name'];
             $f=$this->input->post('slug-name');
             $g=$this->session->userdata('userid');
             $h=$ext;
             $j=$name;
             $k=$videopower['playtime_string'];
-            $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h,$j,$k);
+            $data = $this->Berita_model->inserting_berita($o,$b,$c,$d,$e,$f,$g,$h,$j,$k);
              echo json_encode($data);
             }
         }else{
@@ -110,17 +109,17 @@ class Action_berita extends CI_Controller {
             $config['new_image']= './assets/img/post-berita/'.$gbr['file_name'];
             $this->load->library('image_lib', $config);
             $this->image_lib->resize();
-            $temporary = base_url('assets/img/post-berita/'.$gbr['file_name']);
             $a=$this->input->post('berita-name');
             $b=$this->input->post('kategoris');
             $c=$this->input->post('berita-author');
             $d=$this->input->post('kontens');
-            $e = '<img src="'.$temporary.'" alt="">';
+            $e=$gbr['file_name'];
             $f=$this->input->post('slug-name');
             $g=$this->session->userdata('userid');
             $h=$ext;
             $j='Media Null';
-            $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h,$j);
+            $k='NoDuration';
+            $data = $this->Berita_model->inserting_berita($a,$b,$c,$d,$e,$f,$g,$h,$j,$k);
              echo json_encode($data);
             }
         else{

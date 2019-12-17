@@ -13,6 +13,11 @@ public function list_berita(){
 	$this->db->from('berita');
 	return $this->db->get()->result_array();
 }
+public function list_rtrw(){
+    $this->db->select('kelurahan, kecamatan, rw, nik_rw, nama_rw, telp_rw, rt, nik_rt, nama_rt, telp_rt, id');
+    $this->db->from('tbl_rtrw');
+    return $this->db->get()->result_array();
+}
 public function inserting_berita($a,$b,$c,$d,$e,$f,$g,$h,$j){
 	date_default_timezone_set('Asia/Jakarta');
     $tglposting=date('Y-m-d H:i:s');
@@ -54,9 +59,11 @@ public function get_kel(){
     $this->db->group_by('kelurahan');
     return $this->db->get()->result_array();
 }
-public function get_kec(){
+public function get_kec($kec){
     $this->db->select('kecamatan');
     $this->db->from('tbl_rtrw');
+    $a = $kec;
+    $this->db->where('kelurahan',$a);
     $this->db->group_by('kecamatan');
     return $this->db->get()->result_array();
 }

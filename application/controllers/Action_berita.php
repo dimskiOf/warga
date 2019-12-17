@@ -14,11 +14,12 @@ class Action_berita extends CI_Controller {
         public function index()
     {
         redirect(base_url().'dashboard', 'refresh');
-        // $this->load->view('view_main/dashboard');
-        // $data['kelur'] = $this->Berita_model->get_kel();
-        // $data['kecam'] = $this->Berita_model->get_kec();
     }
-
+function get_kec(){
+  $a = $this->input->post('keg-kel');
+  $data = $this->Berita_model->get_kec($a);
+  echo json_encode($data);
+}
 function inputdatakegiatan(){
     if (-($this->session->userdata('privilages') == 'SUPERADMIN') or ($this->session->userdata('privilages') == 'ADMIN')){
 
@@ -211,6 +212,14 @@ public function builders(){
     public function getdataberita(){
         if ($this->session->userdata('privilages') == 'SUPERADMIN'){
           $data = $this->Berita_model->list_berita();
+          echo json_encode($data);
+        }else{
+          $this->load->view('err404');
+        }
+      }
+    public function getdatartrw(){
+        if (($this->session->userdata('privilages')) == 'ADMIN' or ($this->session->userdata('privilages'))=='SUPERADMIN' ){
+          $data = $this->Berita_model->list_rtrw();
           echo json_encode($data);
         }else{
           $this->load->view('err404');

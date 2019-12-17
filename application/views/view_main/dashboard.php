@@ -409,6 +409,40 @@ background:lightgray
                   </div>
                 </div>
         </div>
+        <!-- list rt rw -->
+        <div id="rtrw-info" class="container-fluid">
+          <!-- Page Header-->
+          <header> 
+            <h1 class="h3 display">RT&RW</h1>
+          </header>
+                <div class="card-header d-flex align-items-center">
+                  <h4>Data RT&RW Kota Bandung</h4>
+                </div>
+               
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-striped table-hover" id="tabel-berita">
+                      <thead>
+                        <tr>
+                          <th onclick="sortTable(0)">No</th>
+                          <th onclick="sortTable(1)">Kelurahan</th>
+                          <th onclick="sortTable(2)">Kecamatan</th>
+                          <th onclick="sortTable(3)">RW</th>
+                          <th onclick="sortTable(4)">NIK RW</th>
+                          <th onclick="sortTable(5)">Nama RW</th>
+                          <th onclick="sortTable(6)">Telp RW</th>
+                          <th onclick="sortTable(7)">RT</th>
+                          <th onclick="sortTable(8)">NIK RT</th>
+                          <th onclick="sortTable(9)">Nama RT</th>
+                          <th onclick="sortTable(10)">Telp RT</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody id="list_data_rtrw"></tbody>
+                    </table>
+                  </div>
+                </div>
+        </div>
 
          <!-- rt add -->
         <div id="form-addrtrw" class="container-fluid">
@@ -488,7 +522,7 @@ background:lightgray
                     <div class="line"></div>
                     <div class="form-group row">
                       <div class="col-sm-4 offset-sm-2">
-                        <button id="clear-form" type="submit" class="btn btn-secondary">Batalkan</button>
+                        <button id="clear-rt" type="submit" class="btn btn-secondary">Batalkan</button>
                         <button id="input-rt" type="submit" class="btn btn-primary">Input Data</button>
                       </div>
                     </div>
@@ -604,10 +638,10 @@ background:lightgray
                       <label class="col-sm-2 form-control-label">Kecamatan</label>
                       <div class="col-sm-2">
                         <select id="kec-select" required="" class="form-control select" name="keg-kec">
-                          <?php foreach ($kecam as $kec) {
+                          <!-- <?php foreach ($kecam as $kec) {
                             ?>
                           }<option><?php echo $kec['kecamatan'];?></option>
-                        <?php }?>
+                        <?php }?> -->
                       </select>
                       </div>
                       <label class="col-sm-1 form-control-label">RW</label>
@@ -646,7 +680,7 @@ background:lightgray
                     <div class="line"></div>
                     <div class="form-group row">
                       <div class="col-sm-4 offset-sm-2">
-                        <button id="clear-form" type="submit" class="btn btn-secondary">Batalkan</button>
+                        <button id="clear-keg" type="submit" class="btn btn-secondary">Batalkan</button>
                         <button id="input-keg" type="submit" class="btn btn-primary">Input</button>
                       </div>
                     </div>
@@ -719,8 +753,8 @@ background:lightgray
     <script>
     	$(document).ready(function(){
         tampil_data_user();
-        tampil_data_berita()  
-        
+        tampil_data_berita();  
+        tampil_data_rtrw();
         
         function tampil_data_berita(){
             $.ajax({
@@ -736,11 +770,9 @@ background:lightgray
                    	table = $('#tabel-berita').DataTable();
                     for(i=0; i<data.length; i++){
                     	table.row.add([ no++, data[i].judul, data[i].kategori_berita, data[i].tgl, data[i].pembuat, data[i].id_berita, '<div class="input-group"> <div class="input-group-prepend"> <button data-toggle="dropdown" type="button" class="btn btn-outline-secondary dropdown-toggle">Action <span class="caret"></span></button> <div class="dropdown-menu"> <a href=javascript:; class="dropdown-item berita_edit" data="'+data[i].id_berita+'">Edit</a> <a href="javascript:;" class="dropdown-item berita_hapus" data="'+data[i].id_berita+'">Hapus</a><a href="#" class="dropdown-item view_hapus" data="'+data[i].id_berita+'" target="_blank">View</a> </div> </div>']);
-                       
                     }
                     table.draw();
                 }
- 
             });
         }  
       
@@ -771,7 +803,38 @@ background:lightgray
  
             });
         }
+
+        function tampil_data_rtrw(){
+            $.ajax({
+                type  : 'GET',
+                url   : '<?php echo base_url()?>Action_berita/getdatartrw',
+                async : true,
+                dataType : 'json',
+                success : function(data){
+                    var html = '';
+                    var i;
+                    var no = 1;
+                    for(i=0; i<data.length; i++){
+                        html += '<tr>'+
+                            '<td>'+no+++'</td>'+
+                                '<td>'+data[i].kelurahan+'</td>'+
+                                '<td>'+data[i].kecamatan+'</td>'+
+                                '<td>'+data[i].rw+'</td>'+
+                                '<td>'+data[i].nik_rw+'</td>'+
+                                '<td>'+data[i].nama_rw+'</td>'+
+                                '<td>'+data[i].telp_rw+'</td>'+
+                                '<td>'+data[i].rt+'</td>'+
+                                '<td>'+data[i].nik_rt+'</td>'+
+                                '<td>'+data[i].nama_rt+'</td>'+
+                                '<td>'+data[i].telp_rt+'</td>'+'<td>'+'<div class="input-group"> <div class="input-group-prepend"> <button data-toggle="dropdown" type="button" class="btn btn-outline-secondary dropdown-toggle">Action <span class="caret"></span></button> <div class="dropdown-menu"> <a href=javascript:; class="dropdown-item item_edit" data="'+data[i].id+'">Edit</a> <a href="javascript:;" class="dropdown-item item_hapus" data="'+data[i].id+'">Hapus</a> </div> </div>'+'</td>'
+                                +
+                                '</tr>';
+                    }
+                    $('#list_data_rtrw').html(html);
+                }
  
+            });
+        }
         //UPDATE
         $('#show_data').on('click','.item_edit',function(){
             var id=$(this).attr('data');
@@ -870,9 +933,11 @@ background:lightgray
 <?php }elseif ($this->session->userdata('privilages') == 'ADMIN'){ ?>
 	<script>
     	$(document).ready(function(){
-        tampil_data_user();  
+        tampil_data_user();
+        tampil_data_rtrw();  
         $('#mydata').dataTable();
-          
+        $('#data-rw').dataTable();
+
       
         function tampil_data_user(){
             $.ajax({
@@ -897,6 +962,37 @@ background:lightgray
                                 '</tr>';
                     }
                     $('#show_data').html(html);
+                }
+ 
+            });
+        }
+        function tampil_data_rtrw(){
+            $.ajax({
+                type  : 'GET',
+                url   : '<?php echo base_url()?>Action_berita/getdatartrw',
+                async : true,
+                dataType : 'json',
+                success : function(data){
+                    var html = '';
+                    var i;
+                    var no = 1;
+                    for(i=0; i<data.length; i++){
+                        html += '<tr>'+
+                            '<td>'+no+++'</td>'+
+                                '<td>'+data[i].kelurahan+'</td>'+
+                                '<td>'+data[i].kecamatan+'</td>'+
+                                '<td>'+data[i].rw+'</td>'+
+                                '<td>'+data[i].nik_rw+'</td>'+
+                                '<td>'+data[i].nama_rw+'</td>'+
+                                '<td>'+data[i].telp_rw+'</td>'+
+                                '<td>'+data[i].rt+'</td>'+
+                                '<td>'+data[i].nik_rt+'</td>'+
+                                '<td>'+data[i].nama_rt+'</td>'+
+                                '<td>'+data[i].telp_rt+'</td>'+'<td>'+'<div class="input-group"> <div class="input-group-prepend"> <button data-toggle="dropdown" type="button" class="btn btn-outline-secondary dropdown-toggle">Action <span class="caret"></span></button> <div class="dropdown-menu"> <a href=javascript:; class="dropdown-item item_edit" data="'+data[i].id+'">Edit</a> <a href="javascript:;" class="dropdown-item item_hapus" data="'+data[i].id+'">Hapus</a> </div> </div>'+'</td>'
+                                +
+                                '</tr>';
+                    }
+                    $('#list_data_rtrw').html(html);
                 }
  
             });
@@ -1107,10 +1203,11 @@ background:lightgray
 	$("#form-berita").hide();
   $("#form-addrtrw").hide();
   $("#form-kegiatan").hide();
+  $("#rtrw-info").hide();
 
   $(document).ready(function(){
     $("#list-rtrw").click(function(){
-      $("#list-rtrw").fadeIn();
+      $("#rtrw-info").fadeIn();
       $("#list-berita").fadeOut();
       $("#form-berita").fadeOut();
       $("#form-addrtrw").fadeOut();
@@ -1125,7 +1222,7 @@ background:lightgray
 			$("#form-berita").fadeOut();
       $("#form-addrtrw").fadeOut();
       $("#form-kegiatan").fadeOut();
-      $("#list-rtrw").fadeOut();
+      $("#rtrw-info").fadeOut();
 		});
 	});
 	$(document).ready(function(){
@@ -1135,7 +1232,7 @@ background:lightgray
 			$("#list-berita").fadeIn();
       $("#form-addrtrw").fadeOut();
       $("#form-kegiatan").fadeOut();
-      $("#list-rtrw").fadeOut();
+      $("#rtrw-info").fadeOut();
 		});
 	});
 	$(document).ready(function(){
@@ -1145,7 +1242,7 @@ background:lightgray
 			$("#form-berita").fadeIn();
       $("#form-addrtrw").fadeOut();
       $("#form-kegiatan").fadeOut();
-      $("#list-rtrw").fadeOut();
+      $("#rtrw-info").fadeOut();
 		});
 	});
   $(document).ready(function(){
@@ -1155,7 +1252,7 @@ background:lightgray
       $("#form-berita").fadeOut();
       $("#form-addrtrw").fadeIn();
       $("#form-kegiatan").fadeOut();
-      $("#list-rtrw").fadeOut();
+      $("#rtrw-info").fadeOut();
     });
   });
   $(document).ready(function(){
@@ -1165,7 +1262,7 @@ background:lightgray
       $("#form-berita").fadeOut();
       $("#form-addrtrw").fadeOut();
       $("#list-user").fadeOut();
-      $("#list-rtrw").fadeOut();
+      $("#rtrw-info").fadeOut();
     });
   });
     $('#goreadme').summernote({
@@ -1219,6 +1316,48 @@ background:lightgray
 		 $('#auth').val('');	
 		});
 	});
+ $(document).ready(function() {
+  $("#clear-keg").click(function (event){
+    event.preventDefault();
+    document.getElementById('proses-keg').reset();
+  });
+});
+$(document).ready(function() {
+  $("#clear-rt").click(function (event){
+    event.preventDefault();
+    document.getElementById('proses-rt').reset();
+  });
+});
+$(document).ready(function() {
+  $("#keg-select").change(function (event){
+    var selected = $(this).children("option:selected").val();
+    var form = $('#proses-keg')[0];
+    // Create an FormData object 
+        var data = new FormData(form);
+    $.ajax({
+            type: "POST",
+            enctype: 'multipart/form-data',
+            url: "<?php echo base_url(); ?>Action_berita/get_kec",
+            data: data,
+            dataType:"json",
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+            $('#kec-select').empty();
+              $.each(data, function(i,item){
+                $('#kec-select')
+                  .append('<option>'+data[i].kecamatan+'</option>');
+              });
+            },
+            error: function (e) {
+              
+            }
+        });
+  })
+})
+
 $(document).ready(function () {
 
     $("#input-rt").click(function (event) {
@@ -1248,7 +1387,7 @@ $(document).ready(function () {
             timeout: 600000,
             success: function (data) {
 
-        $('#clear-form').click();
+        $('#clear-rt').click();
               
 
             },
@@ -1291,7 +1430,7 @@ $(document).ready(function () {
             timeout: 600000,
             success: function (data) {
 
-        $('#clear-form').click();
+        $('#clear-keg').click();
               
 
             },

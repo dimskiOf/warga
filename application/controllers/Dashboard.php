@@ -15,8 +15,7 @@ class dashboard extends CI_Controller {
     {   
         $ses1 = $this->session->userdata('id');
         if (isset($ses1)){
-            $data['kelur'] = $this->Berita_model->get_kel(); 
-            $data['kecam'] = $this->Berita_model->get_kec();    
+            $data['kelur'] = $this->Berita_model->get_kel();    
             $this->load->view('view_main/dashboard', $data);
         }else{
         redirect(base_url().'login', 'refresh');

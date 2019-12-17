@@ -75,10 +75,6 @@
                                         </ul>
                                     </li>
                                     <li><a href="<?php echo base_url();?>streaming">LIVE Streaming</a>
-                                        <ul class="dropdown">
-                                            <li><a href="<?php echo base_url();?>index">Youtube</a></li>
-                                            <li><a href="<?php echo base_url();?>archive">Radio</a></li>
-                                        </ul>
                                     </li>   
                                     <li><a href="<?php echo base_url();?>informasi">Informasi RT & RW</a>
                                         <ul class="dropdown">
@@ -123,9 +119,9 @@
 				</div>
 				<div class="col-5">
 				<div class="hero-area owl-carousel" style="width: auto; height: auto;">
-				<img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x.jpg" alt="">
-				<img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x2.jpg" alt="">
-				<img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x22.jpg" alt="">
+                <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x.jpg" alt=""></a>
+                <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x22.jpg" alt=""></a>
+                <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/informasi-kegiatan/x2.jpg" alt=""></a>
 				</div>
 				</div>
 				<div class="col-7">
@@ -269,25 +265,6 @@
                 <div id="comments-container"></div>
             </div>
             </div>
-
-             <div class="single-sidebar-widget p-30">
-                <div class="section-heading">
-                    <h5>Mitra Kami</h5>
-                </div>
-                <div class="single-blog-post d-flex">
-            <div class="single-sidebar-widget">
-               <br> <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/core-img/bri.png" alt=""></a>
-            </div></div>
-            <div class="single-blog-post d-flex">
-            <div class="single-sidebar-widget">
-              <br>  <a href="#b" class="add-img"><img src="<?php echo base_url();?>assets/img/core-img/bjb.png" alt=""></a>
-            </div></div>
-            <div class="single-blog-post d-flex">
-             <div class="single-sidebar-widget">
-               <br> <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/core-img/bpjs-ketenagakerjaan.jpg" alt=""></a>
-            </div></div>
-            <div class="single-blog-post d-flex"></div>
-        </div>
     </div>
     </section>
     <!-- ##### Hero Area End ##### -->
@@ -296,102 +273,47 @@
         <div class="container">
             <div class="row">
                 <!-- Footer Widget Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-lg-4">
                     <div class="footer-widget">
                         <!-- Logo -->
-                        <a href="index.html" class="foo-logo"><img src="<?php echo base_url();?>assets/img/core-img/logotest.png" alt=""></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="footer-social-info">
-                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                        </div>
+                       <center><a href="index.html" class="foo-logo"><img src="<?php echo base_url();?>assets/img/core-img/logotest.png" alt=""></a></center>
+                        <center><p>Jalan RE Martadinata St No.46, Citarum, Bandung Wetan, Bandung City, West Java 40115, 085795595575 </p></center>
+                        <center><div class="footer-social-info">
+                            <a href="https://www.facebook.com" class="facebook"><i class="fa fa-facebook">
+                            </i></a>
+                            <a href="https://www.instagram.com" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.twitter.com" class="twitter"><i class="fa fa-twitter">
+                            </i></a>
+                        </div></center>
                     </div>
-                </div>
+               </div>
 
                 <!-- Footer Widget Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="footer-widget">
-                        <h6 class="widget-title">Kategori</h6>
-                        <nav class="footer-widget-nav">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Life Style</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Tech</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Travel</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Music</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Foods</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Fashion</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Game</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Football</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sports</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> TV Show</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
 
                 <!-- Footer Widget Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-lg-4">
                     <div class="footer-widget">
-                        <h6 class="widget-title">Sport Videos</h6>
-                        <!-- Single Blog Post -->
-                        <div class="single-blog-post style-2 d-flex">
-                            <div class="post-thumbnail">
-                                <img src="<?php echo base_url();?>assets/img/bg-img/12.jpg" alt="">
-                            </div>
-                            <div class="post-content">
-                                <a href="<?php echo base_url();?>single-post" class="post-title">Take A Romantic Break In A Boutique Hotel</a>
-                                <div class="post-meta d-flex justify-content-between">
-                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Blog Post -->
-                        <div class="single-blog-post style-2 d-flex">
-                            <div class="post-thumbnail">
-                                <img src="<?php echo base_url();?>assets/img/bg-img/13.jpg" alt="">
-                            </div>
-                            <div class="post-content">
-                                <a href="<?php echo base_url();?>single-post" class="post-title">Travel Prudently Luggage And Carry On</a>
-                                <div class="post-meta d-flex justify-content-between">
-                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Footer Widget Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="footer-widget">
-                        <h6 class="widget-title">Channels</h6>
-                        <ul class="footer-tags">
-                            <li><a href="#">Travel</a></li>
-                            <li><a href="#">Fashionista</a></li>
-                            <li><a href="#">Music</a></li>
-                            <li><a href="#">DESIGN</a></li>
-                            <li><a href="#">NEWS</a></li>
-                            <li><a href="#">TRENDING</a></li>
-                            <li><a href="#">VIDEO</a></li>
-                            <li><a href="#">Game</a></li>
-                            <li><a href="#">Sports</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Foods</a></li>
-                            <li><a href="#">TV Show</a></li>
-                            <li><a href="#">Twitter Video</a></li>
-                            <li><a href="#">Playing</a></li>
-                            <li><a href="#">clips</a></li>
+                        <h6 class="widget-title">Lokasi Kami</h6>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8670804047233!2d107.61561731431699!3d-6.906493669509677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64a6f5d33d9%3A0x1b9680357b9941a5!2sGrha%20Kompas%20Gramedia!5e0!3m2!1sid!2sid!4v1575817343562!5m2!1sid!2sid" width="350" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
+         
+
+        <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="footer-widget">
+                        <h6 class="widget-title">Mitra Kami</h6>
+                        <div class="row"> 
+            <div class="col-6 col-sm-3 col-lg-5">
+             <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/sponsor/spon1.png" alt=""></a></div>
+              <div class="col-6 col-sm-3 col-lg-5">
+            <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/sponsor/spon2.png" alt=""></a></div>
+             <div class="col-6 col-sm-3 col-lg-5">
+            <a href="#a" class="add-img"><img src="<?php echo base_url();?>assets/img/sponsor/spon3.png" alt=""></a></div>
+            </div></div></div>
+                </div>
+                   </div>
+                     </div></div>
 
         <!-- Copywrite Area -->
         <div class="copywrite-area">

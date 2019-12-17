@@ -75,10 +75,6 @@
                                         </ul>
                                     </li>
                                     <li><a href="<?php echo base_url();?>streaming">LIVE Streaming</a>
-                                        <ul class="dropdown">
-                                            <li><a href="<?php echo base_url();?>index">Youtube</a></li>
-                                            <li><a href="<?php echo base_url();?>archive">Radio</a></li>
-                                        </ul>
                                     </li>   
                                     <li><a href="<?php echo base_url();?>informasi">Informasi RT & RW</a>
                                         <ul class="dropdown">
@@ -501,22 +497,14 @@
                 </div>
                                           
                 <!-- Section Title --></div>
-                 <div class="single-sidebar-widget p-30">
+                                  <div class="single-sidebar-widget p-30">
                                     <div class="section-heading">
-                                        <h5>Statistik</h5>
+                                        <h5>PETA REKREASI</h5>
                 </div>
                                       
                 <!-- Social Followers Info -->
-                <div class="social-followers-info">
-                    <!-- Facebook -->
-                    <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i> 4,360 <span>Like</span></a>
-                    <!-- Twitter -->
-                    <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i> 3,280 <span>Followers</span></a>
-                    <!-- YouTube -->
-                    <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i> 1250 <span>Subscribers</span></a>
-                    <!-- Google -->
-                    <a href="#" class="google-followers"><i class="fa fa-google-plus"></i> 4,230 <span>Followers</span></a>
-                </div>
+<iframe width="250" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/d/u/0/embed?mid=15mn2vqWcljzA3jLD215uIdOiuU5m9Z_O" width="250" height="450"></iframe>
+
             </div>
             </div>
         </div>
@@ -710,14 +698,14 @@
                     <div class="footer-widget">
                         <!-- Logo -->
                         <a href="index.html" class="foo-logo"><img src="<?php echo base_url();?>assets/img/core-img/logotest.png" alt=""></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="footer-social-info">
-                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                        </div>
+                        <p>Jalan RE Martadinata St No.46, Citarum, Bandung Wetan, Bandung City, West Java 40115, 085795595575</p>
+                        <center><div class="footer-social-info">
+                            <a href="https://www.facebook.com" class="facebook"><i class="fa fa-facebook">
+                            </i></a>
+                            <a href="https://www.instagram.com" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.twitter.com" class="twitter"><i class="fa fa-twitter">
+                            </i></a>
+                        </div></center>
                     </div>
                 </div>
 

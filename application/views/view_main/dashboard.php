@@ -250,9 +250,13 @@ background:lightgray
             if($this->session->userdata('id')){
             echo '<li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-interface-windows"></i>Berita</a><ul id="exampledropdownDropdown" class="collapse list-unstyled "><li id="add-berita"><a href="#">Tambah Berita</a></li><li id="berita-info"><a href="#" data-toggle="modal" data-target="#modalShare">List Berita</a></li>
                    </ul></li>
-                   <li><a href="#examplertrw" aria-expanded="false" data-toggle="collapse"><i class="icon-interface-windows"></i>Data RT&RW</a><ul id="examplertrw" class="collapse list-unstyled "><li><a href="#" data-toggle="modal" data-target="#myModal">List RT&RW</a></li>
-                   		<li><a href="#" data-toggle="modal" data-target="#myModal">List UMKM</a></li>
-                   <li><a href="#" data-toggle="modal" data-target="#modalShare">Tambah Data</a></li>
+                   <li><a href="#examplertrw" aria-expanded="false" data-toggle="collapse"><i class="icon-interface-windows">
+                   </i>Data RT&RW</a><ul id="examplertrw" class="collapse list-unstyled ">
+                   <li id="add-rtrw"><a href="#">Tambah RT&RW</a></li>
+                   <li id="list-rtrw"><a href="#" data-toggle="modal" data-target="#myModal">List RT&RW</a></li>
+                   <li id="add-kegiatan"><a href="#">Tambah Kegiatan</a></li>
+                   <li><a href="#" data-toggle="modal" data-target="#myModal">List Kegitan</a></li>
+                   
                    </ul></li>
                    <li><a href="#" aria-expanded="false" ><i class="icon-interface-windows"></i>Setting</a><ul id="example" class="collapse list-unstyled ">
                    </ul></li>';
@@ -281,7 +285,10 @@ background:lightgray
         <nav class="navbar">
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
+<<<<<<< HEAD
               <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="<?php echo base_url();?>" class="navbar-brand">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="" class="navbar-brand">
+>>>>>>> 90dbba6f26482fd84bdbb385b5b63b18798679e2
                   <div class="brand-text d-none d-md-inline-block"><strong class="text-primary">Dashboard</strong></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
               	<li class="nav-item"><a href="#" id="" class="nav-link logout"> <span class="d-none d-sm-inline-block"><?php echo $this->session->userdata('id'); ?></span><i class="fa fa-user"></i></a></li>
@@ -431,12 +438,103 @@ background:lightgray
                 </div>
         </div>
 
+         <!-- rt add -->
+        <div id="form-addrtrw" class="container-fluid">
+          <div class="container-fluid">
+          <!-- Page Header-->
+          <header> 
+            <h1 class="h3 display">Form Input RT/RW           </h1>
+          </header>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header d-flex align-items-center">
+                  <h4>Isi Form Berikut</h4>
+                </div>
+                <div class="card-body">
+                  <form class="form-horizontal" id="proses-rt" action="<?php echo base_url(); ?>Action_berita/inputdatartrw" method="POST" enctype="multipart/form-data">
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Kelurahan</label>
+                      <div class="col-sm-10">
+                        <input id="auth" name="klurhn-name" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Kecamatan</label>
+                      <div class="col-sm-10">
+                        <input id="auth" name="kcmtn-name" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">RW</label>
+                      <div class="col-sm-10">
+				            <input id="auth" name="rw-no" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">NIK Ketua RW</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rw-nik" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Nama Ketua RW</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rw-name" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Telepon RW</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rw-telp" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">RT</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rt-no" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">NIK Ketua RT</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rt-nik" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Nama Ketua RT</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rt-name" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Telpon RT</label>
+                      <div class="col-sm-10">
+                    <input id="auth" name="rt-telp" type="text" class="form-control" required="">
+                      </div>
+                    </div>                    
+                    <div class="line"></div>
+                    <div class="form-group row">
+                      <div class="col-sm-4 offset-sm-2">
+                        <button id="clear-form" type="submit" class="btn btn-secondary">Batalkan</button>
+                        <button id="input-rt" type="submit" class="btn btn-primary">Input Data</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- end rt add -->
+
          <!-- berita add -->
         <div id="form-berita" class="container-fluid">
           <div class="container-fluid">
           <!-- Page Header-->
           <header> 
-            <h1 class="h3 display">Forms Berita           </h1>
+            <h1 class="h3 display">Form Input Berita           </h1>
           </header>
           <div class="row">
             <div class="col-lg-12">
@@ -453,7 +551,7 @@ background:lightgray
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="col-sm-2 form-control-label">slug berita</label>
+                      <label class="col-sm-2 form-control-label">Slug berita</label>
                       <div class="col-sm-10">
                         <input id="slg-berita" name="slug-name" type="text" class="form-control" required="">
                       </div>
@@ -470,7 +568,7 @@ background:lightgray
                		<div class="form-group row" id="zone-up1">
                       <label class="col-sm-2 form-control-label">Video (.mp4)</label>
                       <div class="col-sm-10">
-				            <input id="file-0" name="myFile" class="file" type="file">
+                    <input id="file-0" name="myFile" class="file" type="file">
                       </div>
                     </div>
                     <div class="form-group row" id="zone-up2">
@@ -520,8 +618,89 @@ background:lightgray
           </div>
         </div>
         </div>
-        <!-- end berita add -->
-
+        <!-- end berita -->
+         <!-- kegiatan add -->
+        <div id="form-kegiatan" class="container-fluid">
+          <div class="container-fluid">
+          <!-- Page Header-->
+          <header> 
+            <h1 class="h3 display">Form Input Kegiatan           </h1>
+          </header>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header d-flex align-items-center">
+                  <h4>Isi Form Berikut</h4>
+                </div>
+                <div class="card-body">
+                  <form class="form-horizontal" id="proses-keg" action="<?php echo base_url(); ?>Action_berita/inputdatakegiatan" method="POST" enctype="multipart/form-data">
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Kelurahan</label>
+                      <div class="col-sm-2">
+                        <select id="keg-select" required="" class="form-control select" name="keg-kel">
+                          <?php foreach ($kelur as $kel) {
+                            ?>
+                          }<option><?php echo $kel['kelurahan'];?></option>
+                        <?php }?>
+                        </select>
+                      </div>
+                      <label class="col-sm-2 form-control-label">Kecamatan</label>
+                      <div class="col-sm-2">
+                        <select id="kec-select" required="" class="form-control select" name="keg-kec">
+                          <?php foreach ($kecam as $kec) {
+                            ?>
+                          }<option><?php echo $kec['kecamatan'];?></option>
+                        <?php }?>
+                      </select>
+                      </div>
+                      <label class="col-sm-1 form-control-label">RW</label>
+                      <div class="col-sm-1">
+                        <input id="auth" name="keg-rw" type="text" class="form-control" required="">
+                      </div>
+                      <label class="col-sm-1 form-control-label">RT</label>
+                      <div class="col-sm-1">
+                        <input id="auth" name="keg-rt" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Nama Kegiatan</label>
+                      <div class="col-sm-10">
+                        <input id="auth" name="keg-name" type="text" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Tanggal Kegiatan</label>
+                      <div class="col-sm-10">
+                        <input id="auth" name="keg-tgl" type="date" class="form-control" required="">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Deskripsi</label>
+                      <div class="col-sm-10">
+                        <textarea id="goreadme" name="keg-desk" type="textarea" class="form-control" required=""></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Foto Kegiatan (.jpg .mp4 .png)</label>
+                      <div class="col-sm-10">
+                    <input id="file-0" name="myFile-keg" class="file" type="file">
+                      </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                      <div class="col-sm-4 offset-sm-2">
+                        <button id="clear-form" type="submit" class="btn btn-secondary">Batalkan</button>
+                        <button id="input-keg" type="submit" class="btn btn-primary">Input</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- end kegiatan -->
         <div class="container-fluid">
           
         </div>
@@ -969,11 +1148,27 @@ background:lightgray
 <script>
 	$("#list-berita").hide();
 	$("#form-berita").hide();
+  $("#form-addrtrw").hide();
+  $("#form-kegiatan").hide();
+
+  $(document).ready(function(){
+    $("#list-rtrw").click(function(){
+      $("#list-rtrw").fadeIn();
+      $("#list-berita").fadeOut();
+      $("#form-berita").fadeOut();
+      $("#form-addrtrw").fadeOut();
+      $("#form-kegiatan").fadeOut();
+      $("#list-user").fadeOut();
+    });
+  });
 	$(document).ready(function(){
 		$("#user-info").click(function(){
 			$("#list-user").fadeIn();
 			$("#list-berita").fadeOut();
 			$("#form-berita").fadeOut();
+      $("#form-addrtrw").fadeOut();
+      $("#form-kegiatan").fadeOut();
+      $("#list-rtrw").fadeOut();
 		});
 	});
 	$(document).ready(function(){
@@ -981,6 +1176,9 @@ background:lightgray
 			$("#list-user").fadeOut();
 			$("#form-berita").fadeOut();
 			$("#list-berita").fadeIn();
+      $("#form-addrtrw").fadeOut();
+      $("#form-kegiatan").fadeOut();
+      $("#list-rtrw").fadeOut();
 		});
 	});
 	$(document).ready(function(){
@@ -988,9 +1186,31 @@ background:lightgray
 			$("#list-user").fadeOut();
 			$("#list-berita").fadeOut();
 			$("#form-berita").fadeIn();
-			
+      $("#form-addrtrw").fadeOut();
+      $("#form-kegiatan").fadeOut();
+      $("#list-rtrw").fadeOut();
 		});
 	});
+  $(document).ready(function(){
+    $("#add-rtrw").click(function(){
+      $("#list-user").fadeOut();
+      $("#list-berita").fadeOut();
+      $("#form-berita").fadeOut();
+      $("#form-addrtrw").fadeIn();
+      $("#form-kegiatan").fadeOut();
+      $("#list-rtrw").fadeOut();
+    });
+  });
+  $(document).ready(function(){
+    $("#add-kegiatan").click(function(){
+      $("#form-kegiatan").fadeIn();
+      $("#list-berita").fadeOut();
+      $("#form-berita").fadeOut();
+      $("#form-addrtrw").fadeOut();
+      $("#list-user").fadeOut();
+      $("#list-rtrw").fadeOut();
+    });
+  });
     $('#goreadme').summernote({
   minHeight: 200,
   placeholder: 'Write here ...',
@@ -1043,6 +1263,95 @@ background:lightgray
 		});
 	});
 
+<<<<<<< HEAD
+    $("#input-rt").click(function (event) {
+
+        //stop submit the form, we will post it manually.
+        event.preventDefault();
+
+        // Get form
+        var form = $('#proses-rt')[0];
+
+    // Create an FormData object 
+        var data = new FormData(form);
+
+    // If you want to add an extra field for the FormData
+        //data.append("CustomField", "This is some extra data, testing");
+
+    
+
+        $.ajax({
+            type: "POST",
+            enctype: 'multipart/form-data',
+            url: "<?php echo base_url(); ?>Action_berita/inputdatartrw",
+            data: data,
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+
+        $('#clear-form').click();
+              
+
+            },
+            error: function (e) {
+                $("#input-rt").prop("disabled", false);
+
+            }
+        });
+
+    });
+
+});
+
+$(document).ready(function () {
+
+    $("#input-keg").click(function (event) {
+
+        //stop submit the form, we will post it manually.
+        event.preventDefault();
+
+        // Get form
+        var form = $('#proses-keg')[0];
+
+    // Create an FormData object 
+        var data = new FormData(form);
+
+    // If you want to add an extra field for the FormData
+        //data.append("CustomField", "This is some extra data, testing");
+
+    
+
+        $.ajax({
+            type: "POST",
+            enctype: 'multipart/form-data',
+            url: "<?php echo base_url(); ?>Action_berita/inputdatakegiatan",
+            data: data,
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+
+        $('#clear-form').click();
+              
+
+            },
+            error: function (e) {
+                $("#input-keg").prop("disabled", false);
+
+            }
+        });
+
+    });
+
+});
+
+$(document).ready(function () {
+
+    $("#berhenti").click(function (event) {
+>>>>>>> 90dbba6f26482fd84bdbb385b5b63b18798679e2
 
 function justimgandvideo(){
 

@@ -285,10 +285,8 @@ background:lightgray
         <nav class="navbar">
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
-<<<<<<< HEAD
+
               <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="<?php echo base_url();?>" class="navbar-brand">
-              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="" class="navbar-brand">
->>>>>>> 90dbba6f26482fd84bdbb385b5b63b18798679e2
                   <div class="brand-text d-none d-md-inline-block"><strong class="text-primary">Dashboard</strong></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
               	<li class="nav-item"><a href="#" id="" class="nav-link logout"> <span class="d-none d-sm-inline-block"><?php echo $this->session->userdata('id'); ?></span><i class="fa fa-user"></i></a></li>
@@ -1359,7 +1357,7 @@ background:lightgray
 		 $('#auth').val('');	
 		});
 	});
-<<<<<<< HEAD
+
  $(document).ready(function() {
   $("#clear-keg").click(function (event){
     event.preventDefault();
@@ -1403,9 +1401,7 @@ $(document).ready(function() {
 })
 
 $(document).ready(function () {
->>>>>>> 5496e596e0d0e29270c3810cfffffaa5d4ec94ff
 
-<<<<<<< HEAD
     $("#input-rt").click(function (event) {
 
         //stop submit the form, we will post it manually.
@@ -1493,7 +1489,6 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     $("#berhenti").click(function (event) {
->>>>>>> 90dbba6f26482fd84bdbb385b5b63b18798679e2
 
 function justimgandvideo(){
 
@@ -1544,6 +1539,8 @@ function justimgandvideo(){
         });
 
     };
+  });
+});
 
 
 

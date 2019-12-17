@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/mainwindows.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/plyr.css">
+   <!-- <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" /> -->
 
 </head>
 
@@ -116,13 +118,13 @@
             <div class="row">
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+                  <div id="b1" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <div class="single-trending-post">
                         <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="">
                         <div class="post-content">
-                            <a href="#" class="post-cata"><font class="font-autosize">POLITIK</font></a>
+                            <a href="#" id="getkonten" class="post-cata"><font class="font-autosize">POLITIK</font></a>
                         </div>
                     </div>
                 </div>
@@ -131,13 +133,13 @@
 
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+                  <div id="b2" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <div class="single-trending-post">
                         <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="">
                         <div class="post-content">
-                            <a href="#" class="post-cata"><font class="font-autosize">PEMERINTAH</font></a>
+                            <a href="#" id="getkonten" class="post-cata"><font class="font-autosize">PEMERINTAH</font></a>
                         </div>
                     </div>
                  </div>
@@ -146,13 +148,13 @@
               
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="">
+                  <div id="b3" class="hero-area owl-carousel" style="">
 
         <!-- Single Trending Post -->
                    <div class="single-trending-post">
                         <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="">
                         <div class="post-content">
-                            <a href="#" class="post-cata"><font class="font-autosize">HUKUM</font></a>
+                            <a href="#" id="getkonten" class="post-cata"><font class="font-autosize">HUKUM</font></a>
                         </div>
                     </div>
             </div>
@@ -161,13 +163,13 @@
               
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="">
+                  <div id="b4" class="hero-area owl-carousel" style="">
 
         <!-- Single Trending Post -->
                    <div class="single-trending-post">
                         <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="">
                         <div class="post-content">
-                            <a href="#" class="post-cata"><font class="font-autosize">KRIMINAL</font></a>
+                            <a href="#" id="getkonten" class="post-cata"><font class="font-autosize">KRIMINAL</font></a>
                         </div>
                     </div>
             </div>
@@ -178,13 +180,13 @@
             <div class="row">
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+                  <div id="b5" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <div class="single-trending-post">
                         <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="">
                         <div class="post-content">
-                            <a href="#" class="post-cata"><font class="font-autosize">BUDAYA</font></a>
+                            <a href="#" id="getkonten" class="post-cata"><font class="font-autosize">BUDAYA</font></a>
                         </div>
                     </div>
                 </div>
@@ -193,13 +195,13 @@
 
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="width: auto; height: auto;">
+                  <div id="b8" class="hero-area owl-carousel" style="width: auto; height: auto;">
 
         <!-- Single Trending Post -->
                     <div class="single-trending-post">
                         <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="">
                         <div class="post-content">
-                            <a href="#" class="post-cata"><font class="font-autosize">LIFESTYLE</font></a>
+                            <a href="#" id="getkonten" class="post-cata"><font class="font-autosize">LIFESTYLE</font></a>
                         </div>
                     </div>
                  </div>
@@ -208,13 +210,13 @@
               
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="">
+                  <div id="b6" class="hero-area owl-carousel" style="">
 
         <!-- Single Trending Post -->
                    <div class="single-trending-post">
                         <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="">
                         <div class="post-content">
-                            <a href="#" class="post-cata"><font class="font-autosize">KESEHATAN</font></a>
+                            <a href="#" id="getkonten" class="post-cata"><font class="font-autosize">KESEHATAN</font></a>
                         </div>
                     </div>
             </div>
@@ -223,13 +225,13 @@
               
               <div class="column">
                 <div class="card">
-                  <div class="hero-area owl-carousel" style="">
+                  <div id="b7" class="hero-area owl-carousel" style="">
 
         <!-- Single Trending Post -->
                    <div class="single-trending-post">
                         <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="">
                         <div class="post-content">
-                            <a href="#" class="post-cata"><font class="font-autosize">OLAHRAGA</font></a>
+                            <a href="#" id="getkonten" class="post-cata"><font class="font-autosize">OLAHRAGA</font></a>
                         </div>
                     </div>
                  </div>
@@ -242,113 +244,42 @@
 
     <!-- ##### Mag Posts Area Start ##### -->
     <section class="mag-posts-area d-flex flex-wrap">
-
-        <!-- >>>>>>>>>>>>>>>>>>>>
-         Post Left Sidebar Area
-        <<<<<<<<<<<<<<<<<<<<< -->
-        <div class="post-sidebar-area left-sidebar mt-30 mb-30 bg-white box-shadow">
-            <!-- Sidebar Widget -->
-            <div class="single-sidebar-widget p-30">
-                <!-- Section Title -->
-                <div class="section-heading">
-                    <h5>Terpopuler</h5>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post d-flex">
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/4.jpg" alt="">
-                    </div>
-                    <div class="post-content">
-                        <a href="<?php echo base_url();?>single-post" class="post-title">Global Travel And Vacations Luxury Travel</a>
-                        <div class="post-meta d-flex justify-content-between">
-                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post d-flex">
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/5.jpg" alt="">
-                    </div>
-                    <div class="post-content">
-                        <a href="<?php echo base_url();?>single-post" class="post-title">Cruising Destination Ideas</a>
-                        <div class="post-meta d-flex justify-content-between">
-                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post d-flex">
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/6.jpg" alt="">
-                    </div>
-                    <div class="post-content">
-                        <a href="<?php echo base_url();?>single-post" class="post-title">The Luxury Of Traveling With</a>
-                        <div class="post-meta d-flex justify-content-between">
-                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post d-flex">
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/7.jpg" alt="">
-                    </div>
-                    <div class="post-content">
-                        <a href="<?php echo base_url();?>single-post" class="post-title">Choose The Perfect Accommodations</a>
-                        <div class="post-meta d-flex justify-content-between">
-                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post d-flex">
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url();?>assets/img/bg-img/8.jpg" alt="">
-                    </div>
-                    <div class="post-content">
-                        <a href="<?php echo base_url();?>single-post" class="post-title">A Guide To Rocky Mountain Vacations</a>
-                        <div class="post-meta d-flex justify-content-between">
-                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- >>>>>>>>>>>>>>>>>>>>
              Main Posts Area
         <<<<<<<<<<<<<<<<<<<<< -->
-        <div class="mag-posts-content mt-30 mb-30 p-30 box-shadow">
+        <?php 
+              if (!empty($isiberita)){
+                $set1 = array_filter($isiberita, function($e){
+                    return $e['extensi'] != 'mp4';
+                    });
+
+                $set2 = array_filter($isiberita, function($b){
+                     return $b['extensi'] == 'mp4';
+            });
+        ?>
+        <div class="mag-berita-content mt-30 mb-30 p-30 box-shadow">
         <!-- Single Blog Post -->
+        <div id="kontenisasi">
+            <?php  foreach($set1 as $row1)
+                  { ?>
+                <div class="single-trending-post">
+                    <img style="height: 400px;" src="<?php echo base_url('assets/img/post-berita/').$row1['thumbnail'];?>" alt="">
+                        <div class="post-content">
+                    </div>                   
+                </div>
+                
                 <div class="single-featured-post">
-                        <!-- Thumbnail -->
-                        <div class="post-thumbnail mb-50">
-                            <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="" style="height: auto">
-                        </div>
                         <!-- Post Contetnt -->
+                    
                         <div class="post-content">
                             <div class="post-meta">
-                                <a href="#">MAY 8, 2019</a>
-                                <a href="<?php echo base_url();?>archive">BERITA</a>
+                                <a href="#"><?php echo $row1['tgl']; ?></a>
+                                <a href="#"><?php echo $row1['kategori_berita']; ?></a>
                             </div>
-                            <a href="<?php echo base_url();?>video-post" class="post-title">JUDUL BERITA</a>
-                            <p>isi berita</p>
+                            <a href="#" class="post-title"><?php echo $row1['judul']; ?></a>
+                            <div class="share-info" style="word-wrap: break-word;">
+                            <p><?php echo $row1['konten']; ?></p>
+                            </div>
                         </div>
                         <!-- Post Share Area -->
                         <div class="post-share-area d-flex align-items-center justify-content-between">
@@ -358,10 +289,63 @@
                                 <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
                                 <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
                             </div>
+                            <div class="share-info">
+                                <a href="#" class="sharebtn"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                                <!-- All Share Buttons -->
+                                <div class="all-share-btn d-flex">
+                                    <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                    <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-        </div>
+                <?php } foreach($set2 as $row2)
+                  { ?>
+        <div class="single-featured-post">
+            
+            <video style="height: 400px;" controls style="" crossorigin playsinline id="player" poster="<?php echo base_url('assets/img/post-berita/').$row2['thumbnail'];?>">
+                <source src="<?php echo base_url('assets/video/video-post/').$row2['media_src'];?>" type="video/mp4">
+            </video>
 
+            <div class="post-content">
+                </div>
+                    </div>
+                <div class="single-featured-post">
+            <div class="post-content">
+        <div class="post-meta">
+            <a href="#"><?php echo $row2['tgl'];?></a>
+                <a href="#"><?php echo $row2['kategori_berita'];?></a>
+            </div>
+        <a href="#" class="post-title"><?php echo $row2['judul'];?></a>
+            <div class="share-info" style="word-wrap: break-word;">
+            <p><?php echo $row2['konten'];?><br></p>
+            </div>
+         </div>
+        <div class="post-share-area d-flex align-items-center justify-content-between">
+            <div class="post-meta pl-3">
+            <a href="#">
+            <i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+            </div>
+            <div class="share-info">
+                <a href="#" class="sharebtn"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                        <!-- All Share Buttons -->
+                        <div class="all-share-btn d-flex">
+                            <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                  <?php } ?>
+                </div>
+        </div>
+        <?php } ?>
         <!-- >>>>>>>>>>>>>>>>>>>>
          Post Right Sidebar Area
         <<<<<<<<<<<<<<<<<<<<< -->
@@ -388,17 +372,19 @@
                     <h5>Kategori</h5>
                 </div>
 
+                <?php if (!empty($isiberita3)){ foreach ($isiberita3 as $row) { ?>
                 <!-- Catagory Widget -->
                 <ul class="catagory-widgets">
-                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Politik</span> <span>0</span></a></li>
-                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Pemerintah</span> <span>0</span></a></li>
-                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Hukum</span> <span>0</span></a></li>
-                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Kriminal</span> <span>0</span></a></li>
-                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Budaya</span> <span>0</span></a></li>
-                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Lifestyle</span> <span>0</span></a></li>
-                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Kesehatan</span><span>0</span></a></li>
-                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Olahraga</span><span>0</span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Politik</span> <span><?php echo $row['pol']; ?></span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Pemerintah</span> <span><?php echo $row['pem']; ?></span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Hukum</span> <span><?php echo $row['huk']; ?></span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Kriminal</span> <span><?php echo $row['krim']; ?></span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Budaya</span> <span><?php echo $row['bud']; ?></span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Lifestyle</span> <span><?php echo $row['lif']; ?></span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Kesehatan</span><span><?php echo $row['kes']; ?></span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>Olahraga</span><span><?php echo $row['olah']; ?></span></a></li>
                 </ul>
+            <?php }} ?>
             </div>
              <div class="single-sidebar-widget p-30">
                 <div class="section-heading">
@@ -426,31 +412,64 @@
     <section class="mag-posts-area d-flex flex-wrap">
         <div class="konten mt-30 mb-30 p-30 box-shadow">
               <!-- Sports Videos -->
-            <div class="sports-videos-area">
-                <!-- Section Title -->
-                <div class="section-heading">
-                    <center><h5>JUDUL</h5></center>
-                </div>
+              <?php 
+              if (!empty($isiberita2)){
+                   $set1 = array_filter($isiberita2, function($e){
+                    return $e['extensi'] == 'mp4';
+                    });
 
-                <div class="neptune owl-carousel mb-30">
-                    <!-- Single Featured Post -->
-                    <div class="single-featured-post">
-                        <!-- Thumbnail -->
-                        <div class="post-thumbnail mb-50">
-                            <img src="<?php echo base_url();?>assets/img/bg-img/22.jpg" alt="">
-                            <a href="<?php echo base_url();?>video-post"></a>
+                    $set2 = array_filter($isiberita2, function($b){
+                     return $b['extensi'] != 'mp4';
+                    });
+             ?>
+            <div class="trending-now-posts mb-30">
+                <!-- Section Title -->
+                <center>
+                <?php  foreach($isiberita as $row) { ?>
+                <div class="section-heading">
+                    <h5><div id="judul_id"><?php echo $row['kategori_berita']; ?></div></h5>
+                </div>
+                <?php } ?>
+                </center>
+                <div id="doy">
+                <div id="berita_taruh" class="neptune owl-carousel mb-30">
+                    <!-- Single Trending Post -->
+                    
+                    <?php  foreach($set1 as $row1)
+                  { ?>  
+                        <div class="single-featured-post">
+                        <div class="post-thumbnail">
+                        <img src="<?php echo base_url('assets/img/post-berita/').$row1['thumbnail']?>" alt="">
+                        <a href="#" class="video-play" data-animation="bounceIn"><i class="fa fa-play"></i></a>
                         </div>
-                        <!-- Post Contetnt -->
                         <div class="post-content">
-                            <div class="post-meta">
-                                <a href="#">MAY 8, 2019</a>
-                                <a href="<?php echo base_url();?>archive">lifestyle</a>
-                            </div>
-                            <a href="<?php echo base_url();?>video-post" class="post-title">Judul Berita</a>
+                            <div class="post-meta"><a href="#"><?php echo $row1['tgl']; ?></a><a href=""><?php echo $row1['kategori_berita'];?></a></div>
+                            <a href=javascript:; onclick="return execs(this.id)" id="<?php echo $row1['id_berita']; ?>" class="post-title btnex"><?php echo $row1['judul'];?>
+                                
+                            </a>
                         </div>
+                   </div>
+                <?php } foreach($set2 as $row2)
+                  { ?>
+                    <div class="single-featured-post">
+                        <div class="post-thumbnail">
+                        <img src="<?php echo base_url('assets/img/post-berita/').$row2['thumbnail']?>" alt="">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta"><a href="#"><?php echo $row2['tgl']; ?></a><a href=""><?php echo $row2['kategori_berita'];?></a></div>
+                            <div class="share-info" style="word-wrap: break-word;">
+                            <a href=javascript:; onclick="return execs(this.id)" id="<?php echo $row2['id_berita']; ?>" class="post-title btnex"><?php echo $row2['judul'];?>
+                            </a>
+                            </div>
+                        </div>
+                          </div>
+                    <?php }} ?>
+
                     </div>
                 </div>
+                </div>
             </div>
+        
         </div>        
     </section>
     <!-- ##### Hero Area End ##### -->
@@ -509,7 +528,7 @@
                     <!-- Copywrite Text -->
                     <div class="col-12 col-sm-6">
                         <p class="copywrite-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="" aria-hidden="true"></i> by <a href="" target="_blank">Developer-Team</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="" aria-hidden="true"></i> by <a href="" target="_blank">Developer-Teamter</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div>
                     <div class="col-12 col-sm-6">
@@ -539,6 +558,130 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="<?php echo base_url();?>assets/js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="<?php echo base_url();?>assets/js/active.js"></script>
+    <script src="<?php echo base_url();?>assets/js/plyr.js"></script>
+   <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.5.5/video.js"></script> -->
+<script>
+$(document).ready(function(){
+    $('a#getkonten').on('click',function(event){
+        event.preventDefault();
+        var poltik_name = $(this).children('font').text();
+        $('div#doy').empty();
+    $.ajax({
+        url: '<?php echo base_url(); ?>Berita/getterdata',
+        method:"post",
+        data:{poltik_name},
+        cache: false,
+        dataType: 'json',
+    success: function(data){
+    $('div#doy').html('<div id="berita_taruh" class="neptune owl-carousel mb-30"></div>'); 
+        var html = '';
+        var html2 = '';
+    if(data.length > 0){
+        for(var i = 0; i<data.length; i++){
+        var ids = (data[i].extensi == "mp4") ? "<img src='<?php echo base_url();?>assets/img/post-berita/"+data[i].thumbnail+"' alt=''><a href='#' class='video-play' data-animation='bounceIn'><i class='fa fa-play'></i></a>": "<img src='<?php echo base_url();?>assets/img/post-berita/"+data[i].thumbnail+"' alt=''>";
+        var kategori = "<a href='#'>"+data[i].tgl+"</a><a href=''>"+data[i].kategori_berita+"</a>";
+        var juduls = "<div class='share-info' style='word-wrap: break-word;'><a href=javascript:; onclick='return execs(this.id)' id='"+data[i].id_berita+"' class='post-title'>"+data[i].judul+"</a></div>";
+
+        html += '<div class="single-featured-post"><div class="post-thumbnail">'+ids+'</div><div class="post-content">'+'<div class="post-meta">'+kategori+'</div>'+juduls+'</div>'+'</div>';
+        html2 += data[i].kategori_berita;
+                }
+              }
+        
+      //  var item1 = $( "div.owl-stage" )[ 8 ];
+        $( "div#berita_taruh" ).html(html);
+        $( "#judul_id" ).html(poltik_name);
+        var owls = $(".neptune");
+            owls.owlCarousel({
+                items: 4,
+            margin: 10,
+            loop: true,
+            center: true,
+            nav: true,
+            navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
+            dots: false,
+            smartSpeed: 1000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+            });
+        owls.trigger('refresh.owl.carousel');
+     }   
+        });  
+    });
+});
+$(document).ready(function(){
+    $('a#getkonten').on('click',function(event){
+        event.preventDefault();
+        var poltik_name = $(this).children('font').text();
+    $.ajax({
+        url: '<?php echo base_url(); ?>Berita/setterdata',
+        method:"post",
+        data:{poltik_name},
+        cache: false,
+        dataType: 'json',
+    success: function(data){  
+        var html = '';
+    if(data.length > 0){
+        for(var i = 0; i<data.length; i++){
+        var ids = (data[i].extensi == "mp4") ? "<div class='single-featured-post'><video style='height: 400px;' controls crossorigin playsinline id='player' poster='<?php echo base_url();?>assets/img/post-berita/"+data[i].thumbnail+"'><source src='<?php echo base_url();?>assets/video/video-post/"+data[i].media_src+"' type='video/mp4'/></video></div>": "<div class='single-trending-post'><img style='height: 400px;' src='<?php echo base_url();?>assets/img/post-berita/"+data[i].thumbnail+"' alt=''></div>";
+        var image = "<img style='height: 400px;' src='<?php echo base_url();?>assets/img/post-berita/"+data[i].thumbnail+"' alt=''>";
+        var kategori = "<a href='#'>"+data[i].tgl+"</a><a href=''>"+data[i].kategori_berita+"</a>";
+        var juduls = "<a href='#' class='post-title'>"+data[i].judul+"</a>";
+
+        html += ids+'</div>'+'<div class="single-featured-post">'+'<div class="post-content">'+'<div class="post-meta">'+'<a href="#">'+data[i].tgl+'</a>'+'<a href="#">'+data[i].kategori_berita+'</a>'+'</div>'+'<a href="#" class="post-title">'+data[i].judul+'</a>'+'<div class="share-info" style="word-wrap: break-word;">'+'<p>'+data[i].konten+'</p>'+'</div>'+'</div>'+'<div class="post-share-area d-flex align-items-center justify-content-between">'+'<div class="post-meta pl-3">'+'<a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>'+'<a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>'+'<a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>'+'</div>'+'<div class="share-info">'+'<a href="#" class="sharebtn"><i class="fa fa-share-alt" aria-hidden="true"></i></a>'+'<div class="all-share-btn d-flex">'+'<a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>'+'<a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>'+'<a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>'+'<a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>'+'</div>'+'</div>'+'</div>'+'</div>';
+                }
+              }
+        $( "div#kontenisasi" ).html(html);
+        const player = new Plyr('#player');
+        window.player = player;
+      }   
+        });  
+    });
+}); 
+
+function execs(obj){
+        event.preventDefault();
+        var poltik_name = obj;
+    $.ajax({
+        url: '<?php echo base_url(); ?>Berita/foosetterdata',
+        method:"post",
+        data:{poltik_name},
+        cache: false,
+        dataType: 'json',
+    success: function(data){  
+        var html = '';
+    if(data.length > 0){
+        for(var i = 0; i<data.length; i++){
+        var ids = (data[i].extensi == "mp4") ? "<div class='single-featured-post'><video style='height: 400px;' controls crossorigin playsinline id='player' poster='<?php echo base_url();?>assets/img/post-berita/"+data[i].thumbnail+"'><source src='<?php echo base_url();?>assets/video/video-post/"+data[i].media_src+"' type='video/mp4'/></video></div>": "<div class='single-trending-post'><img style='height: 400px;' src='<?php echo base_url();?>assets/img/post-berita/"+data[i].thumbnail+"' alt=''></div>";
+        var image = "<img style='height: 400px;' src='<?php echo base_url();?>assets/img/post-berita/"+data[i].thumbnail+"' alt=''>";
+        var kategori = "<a href='#'>"+data[i].tgl+"</a><a href=''>"+data[i].kategori_berita+"</a>";
+        var juduls = "<a href='#' class='post-title'>"+data[i].judul+"</a>";
+
+        html += ids+'<div class="single-featured-post">'+'<div class="post-content">'+'<div class="post-meta">'+'<a href="#">'+data[i].tgl+'</a>'+'<a href="#">'+data[i].kategori_berita+'</a>'+'</div>'+'<a href="#" class="post-title">'+data[i].judul+'</a>'+'<div class="share-info" style="word-wrap: break-word;">'+'<p>'+data[i].konten+'</p>'+'</div>'+'</div>'+'<div class="post-share-area d-flex align-items-center justify-content-between">'+'<div class="post-meta pl-3">'+'<a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>'+'<a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>'+'<a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>'+'</div>'+'<div class="share-info">'+'<a href="#" class="sharebtn"><i class="fa fa-share-alt" aria-hidden="true"></i></a>'+'<div class="all-share-btn d-flex">'+'<a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>'+'<a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>'+'<a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>'+'<a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>'+'</div>'+'</div>'+'</div>'+'</div>';
+                }
+              }
+        $( "div#kontenisasi" ).html(html);
+        const player = new Plyr('#player');
+        window.player = player;
+     }   
+        });  
+
+};
+$(document).ready(function(){
+const player = new Plyr('#player');
+  
+window.player = player;
+})
+</script>
 </body>
 
 </html>

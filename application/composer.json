@@ -15,7 +15,8 @@
 		"datatables.net/editor-php": "1.*",
 		"setasign/fpdi-fpdf": "^2.2",
 		"tecnickcom/tcpdf": "^6.2.13",
-		"pusher/pusher-php-server": "^4.0"
+		"pusher/pusher-php-server": "^4.0",
+		"james-heinrich/getid3": "^1.9"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
